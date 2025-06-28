@@ -1,4 +1,37 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 @import "tailwindcss";
 @plugin "daisyui";
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+
+.space-grotesk-font {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #47d1d1;
+  --color-secondary: #ffffff;
+  --color-base-100: #0F172A ;
+  --color-base-300: #E7E7E7;
+  --color-accent: #706F6F;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+  --color-primary: #FF014F;
+  --color-secondary: #ffffff;
+  --color-base-100: #0F0F0F ;
+  --color-base-300: #E7E7E7;
+  --color-accent: ##f8faff;
+}
+
