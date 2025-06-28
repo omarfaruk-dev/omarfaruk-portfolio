@@ -13,9 +13,9 @@ const About = () => {
             {/* Content Container */}
             <div className="w-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0 my-10">
                 {/* Left Side Image */}
-                <div className="flex-1 flex items-center justify-center mb-8 md:mb-0">
+                <div className="flex-1 flex items-center justify-center mb-8 md:mb-0 group">
                     <div
-                        className="w-80 h-80 flex items-center justify-center shadow-lg relative bg-primary"
+                        className="w-80 h-80 flex items-center justify-center shadow-lg relative bg-primary transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl"
                         style={{
                             clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)',
                             border: '4px solid var(--tw-prose-primary, #46D0D1)'
@@ -24,7 +24,7 @@ const About = () => {
                         <img
                             src="/Headshot.jpg"
                             alt="Omar Faruk"
-                            className="w-full h-full object-cover relative z-10"
+                            className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110"
                             style={{
                                 clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)',
                             }}
@@ -33,17 +33,29 @@ const About = () => {
                 </div>
 
                 {/* Right Side Content */}
-                <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-2 md:px-0">
-                    <p className="text-lg md:text-xl text-secondary mb-4 space-grotesk-font">
-                        I'm Omar Faruk, a <span className="text-primary font-semibold">Frontend Developer</span> focused on building beautiful, performant, and accessible web experiences. I love working with modern JavaScript frameworks and responsive design.
+                <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-2 md:px-0 group">
+                    <p className="text-lg md:text-xl text-secondary mb-4 space-grotesk-font group-hover:text-secondary/90 transition-colors duration-300">
+                        I'm Omar Faruk, a <span className="text-primary font-semibold group-hover:text-primary/80 transition-colors duration-300">Frontend Developer</span> focused on building beautiful, performant, and accessible web experiences. I love working with modern JavaScript frameworks and responsive design.
                     </p>
-                    <p className="text-base md:text-lg text-secondary mb-6 space-grotesk-font">
+                    <p className="text-base md:text-lg text-secondary mb-6 space-grotesk-font group-hover:text-secondary/90 transition-colors duration-300">
                         I enjoy learning new technologies, collaborating with teams, and turning creative ideas into reality. Outside of coding, I like exploring new places and sharing knowledge with the community.
                     </p>
                     {/* Action Buttons */}
                     <div className="flex gap-4 mt-2">
-                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-2 rounded bg-primary text-base-100 font-semibold hover:bg-opacity-90 transition">Get Resume</a>
-                        <a href="#skills" className="px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-base-100 transition">My Skills</a>
+                        <a 
+                            href="/resume.pdf" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="px-6 py-2 rounded bg-primary text-base-100 font-semibold hover:bg-primary/90 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                        >
+                            Get Resume
+                        </a>
+                        <a 
+                            href="#skills" 
+                            className="px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-base-100 transition-all duration-200 border-primary/60 hover:border-primary shadow-sm hover:shadow-md transform hover:-translate-y-1"
+                        >
+                            My Skills
+                        </a>
                     </div>
                 </div>
             </div>

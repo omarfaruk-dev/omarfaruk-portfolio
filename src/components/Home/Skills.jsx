@@ -108,18 +108,20 @@ const Skill = () => {
           ))}
         </div>
         {/* Skill Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {skillData[activeTab].map((skill, index) => (
             <div
               key={index}
-              className=" bg-base-200 p-6 rounded shadow flex items-center gap-6 hover:shadow-xl transition group"
+              className="bg-base-200/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-primary/20 flex items-center gap-6 hover:shadow-2xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="flex flex-col items-center justify-center mr-4">
-                {iconMap[skill.name] || <FaCode className="text-primary text-5xl" />}
+                <div className="transition-transform duration-300 group-hover:scale-110">
+                  {iconMap[skill.name] || <FaCode className="text-primary text-5xl" />}
+                </div>
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="font-semibold text-secondary text-lg space-grotesk-font">{skill.name}</span>
+                  <span className="font-semibold text-secondary text-lg space-grotesk-font group-hover:text-secondary/90 transition-colors duration-300">{skill.name}</span>
                 </div>
                 <ProgressBar
                   completed={progress[index] || 0}
@@ -134,7 +136,7 @@ const Skill = () => {
                   customLabel={null}
                 />
               </div>
-              <div className="ml-4 text-primary font-bold text-xl min-w-[48px] text-right">
+              <div className="ml-4 text-primary font-bold text-xl min-w-[48px] text-right group-hover:text-primary/80 transition-colors duration-300">
                 {displayedValue[index] || 0}%
               </div>
             </div>

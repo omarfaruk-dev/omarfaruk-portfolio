@@ -1,5 +1,6 @@
 
 import About from '../components/Home/About';
+import Contact from '../components/Home/Contact';
 import Hero from '../components/Home/Hero';
 import NavBar from '../components/Home/NavBar';
 import Projects from '../components/Home/Projects';
@@ -13,6 +14,7 @@ const HomeLayouts = () => {
             <About/>
             <Skill/>
             <Projects/>
+            <Contact/>
         </div>
     );
 };

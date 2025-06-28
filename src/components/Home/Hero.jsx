@@ -1,4 +1,3 @@
-
 import { FaGithub, FaLinkedin, FaTwitter, FaCodepen } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 import heroLottie from '../../assets/lotties/hero-lottie.json'
@@ -7,7 +6,7 @@ import Lottie from 'lottie-react';
 
 const Hero = () => {
     return (
-        <section className="mt-16 w-full min-h-[80vh] flex flex-col md:flex-row items-center justify-between py-16 md:py-24 lg:py-32 gap-10 md:gap-0">
+        <section className="mt-16 w-full min-h-[80vh] flex flex-col md:flex-row items-center justify-between py-12 md:py-16 lg:py-24 gap-10 md:gap-0">
             {/* Left Side Content */}
             <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-2 md:px-0">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary space-grotesk-font">Hi, I'm Omar Faruk</h1>
