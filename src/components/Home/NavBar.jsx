@@ -14,8 +14,8 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 z-50 w-full bg-base-100 text-secondary shadow-md">
-      <div className="navbar px-4 md:px-16 max-w-7xl mx-auto flex items-center justify-between">
+    <div className=" fixed bg-base-100 py-3 top-0 left-0 z-99 w-full text-secondary shadow-md">
+      <div className="navbar px-4 max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="navbar-start flex items-center">
         <Logo />
@@ -51,7 +51,7 @@ const NavBar = () => {
         </div>
 
         {/* Hamburger Icon */}
-        <div className="lg:hidden ml-auto z-50 flex items-center justify-center">
+        <div className="lg:hidden ml-auto z-99 flex items-center justify-center">
           <ThemeToggle/>
           <button
             onClick={() => setSidebarOpen(true)}
