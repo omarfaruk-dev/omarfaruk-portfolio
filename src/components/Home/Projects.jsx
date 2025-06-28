@@ -6,45 +6,51 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="py-12 px-4">
-      <div className="w-1/2 mx-auto">
+    <section id="projects" className="py-8 md:py-12 lg:py-16">
+      <div className="w-1/2 mx-auto mb-16">
         <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
         <h2>My Projects</h2>
       </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 my-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 my-10">
         {projectsData.map((project, index) => (
           <div
             key={index}
-            className="card bg-base-200 shadow-md border border-primary/30 hover:shadow-2xl transition-all"
+            className="group card bg-base-200/50 backdrop-blur-sm shadow-lg border border-primary/20 hover:shadow-2xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 rounded-xl overflow-hidden"
           >
-            <figure>
+            <figure className="relative overflow-hidden">
               <img
                 src={project.thumb_img}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
               />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </figure>
-            <div className="card-body">
-              <h3 className="text-xl font-bold text-primary space-grotesk-font">{project.title}</h3>
-              <p className="text-sm text-secondary/80">{project.about}</p>
-              <div className="mt-3 flex flex-wrap gap-2">
+            <div className="card-body p-6">
+              <h3 className="text-xl font-bold text-primary space-grotesk-font group-hover:text-primary/80 transition-colors duration-300">
+                {project.title}
+              </h3>
+              <p className="text-sm text-secondary/80 leading-relaxed">
+                {project.about}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
                 {project.technology.map((tech, i) => (
                   <span
                     key={i}
-                    className="badge badge-outline badge-primary text-sm"
+                    className="badge badge-outline badge-primary text-xs font-medium px-3 py-1 border-primary/40 text-primary/80 hover:bg-primary/10 hover:border-primary/60 transition-all duration-200"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm">
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-sm btn-primary text-base-100"
+                  className="btn btn-sm btn-primary text-base-100 hover:bg-primary/90 transition-all duration-200 shadow-md hover:shadow-lg"
                 >
                   <FaGlobe className="mr-1" /> Live
                 </a>
@@ -52,7 +58,7 @@ const Projects = () => {
                   href={project.client}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-sm btn-outline btn-primary"
+                  className="btn btn-sm btn-outline btn-primary hover:bg-primary hover:text-base-100 transition-all duration-200 border-primary/60 hover:border-primary"
                 >
                   <FaGithub /> Client
                 </a>
@@ -60,17 +66,17 @@ const Projects = () => {
                   href={project.server}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-sm btn-outline btn-primary"
+                  className="btn btn-sm btn-outline btn-primary hover:bg-primary hover:text-base-100 transition-all duration-200 border-primary/60 hover:border-primary"
                 >
                   <FaGithub /> Server
                 </a>
               </div>
-              <div className="card-actions justify-end mt-4">
+              <div className="card-actions justify-end mt-6">
                 <button
-                  className="btn btn-primary btn-outline btn-accent"
+                  className="btn btn-primary btn-outline btn-sm hover:bg-primary hover:text-base-100 transition-all duration-200 border-primary/60 hover:border-primary shadow-sm hover:shadow-md"
                   onClick={() => setSelectedProject(project)}
                 >
-                  Details
+                  View Details
                 </button>
               </div>
             </div>
@@ -119,27 +125,30 @@ const Projects = () => {
       </div>
 
       {/* Buttons */}
-      <div className="flex flex-wrap gap-4 text-sm mb-4">
+      <div className="flex flex-wrap items-center justify-center gap-3 text-sm mb-4">
         <a
           href={selectedProject.live}
-          className="btn btn-sm btn-primary"
           target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-sm btn-primary text-base-100"
         >
-          <FaGlobe className="mr-2" /> Live
+          <FaGlobe className="mr-1" /> Live
         </a>
         <a
           href={selectedProject.client}
-          className="btn btn-sm btn-outline"
           target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-sm btn-outline btn-primary"
         >
-          <FaCode className="mr-2" /> Client
+          <FaGithub /> Client
         </a>
         <a
           href={selectedProject.server}
-          className="btn btn-sm btn-outline"
           target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-sm btn-outline btn-primary"
         >
-          <FaGithub className="mr-2" /> Server
+          <FaGithub /> Server
         </a>
       </div>
 

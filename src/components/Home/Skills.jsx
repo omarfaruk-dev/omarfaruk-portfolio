@@ -85,15 +85,15 @@ const Skill = () => {
   }, [progress, activeTab]);
 
   return (
-    <section id="skills" className="flex flex-col items-center justify-center py-16 md:py-24 lg:py-32 bg-base-100">
+    <section id="skills" className="flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 bg-base-100">
       <div className="max-w-5xl w-full mx-auto px-4">
-        <div className='w-7/11 mx-auto'>
+        <div className='w-7/11 mx-auto mb-16'>
           <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
           <h2>My Skills</h2>
         </div>
         </div>
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 my-10">
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
           {tabs.map((tab) => (
             <button
               key={tab}
