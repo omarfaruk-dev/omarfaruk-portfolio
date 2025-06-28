@@ -2,7 +2,8 @@ import React from 'react';
 
 const About = () => {
     return (
-        <section id="about" className="w-full flex flex-col md:flex-row items-center justify-between py-16 md:py-24 lg:py-32 gap-10 md:gap-0 bg-base-100 mt-8">
+        <section id="about" className="w-full flex flex-col md:flex-row items-center justify-between py-8 md:py-16 gap-10 md:gap-0 bg-base-100 mt-8">
+            
             {/* Left Side Image */}
             <div className="flex-1 flex items-center justify-center mb-8 md:mb-0">
                 <div

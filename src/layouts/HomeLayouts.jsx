@@ -2,6 +2,7 @@
 import About from '../components/Home/About';
 import Hero from '../components/Home/Hero';
 import NavBar from '../components/Home/NavBar';
+import Projects from '../components/Home/Projects';
 import Skill from '../components/Home/Skills';
 
 const HomeLayouts = () => {
@@ -11,6 +12,7 @@ const HomeLayouts = () => {
             <Hero/>
             <About/>
             <Skill/>
+            <Projects/>
         </div>
     );
 };

@@ -14,7 +14,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className=" fixed bg-base-100 py-3 top-0 left-0 z-99 w-full text-secondary shadow-md">
+    <div className=" fixed bg-base-200 py-3 top-0 left-0 z-99 w-full text-secondary shadow-md">
       <div className="navbar px-4 max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="navbar-start flex items-center">

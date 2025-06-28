@@ -85,10 +85,12 @@ const Skill = () => {
   }, [progress, activeTab]);
 
   return (
-    <section id="skills" className="w-full min-h-[60vh] flex flex-col items-center justify-center py-16 md:py-24 bg-base-100">
-      <div className="max-w-4xl w-full mx-auto px-4">
-        <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
+    <section id="skills" className="flex flex-col items-center justify-center py-16 md:py-24 lg:py-32 bg-base-100">
+      <div className="max-w-5xl w-full mx-auto px-4">
+        <div className='w-7/11 mx-auto'>
+          <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
           <h2>My Skills</h2>
+        </div>
         </div>
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-4 my-10">
@@ -110,7 +112,7 @@ const Skill = () => {
           {skillData[activeTab].map((skill, index) => (
             <div
               key={index}
-              className="bg-base-200 p-6 rounded shadow flex items-center gap-6 hover:shadow-xl transition group"
+              className=" bg-base-200 p-6 rounded shadow flex items-center gap-6 hover:shadow-xl transition group"
             >
               <div className="flex flex-col items-center justify-center mr-4">
                 {iconMap[skill.name] || <FaCode className="text-primary text-5xl" />}
