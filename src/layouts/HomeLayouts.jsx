@@ -2,6 +2,7 @@
 import About from '../components/Home/About';
 import Hero from '../components/Home/Hero';
 import NavBar from '../components/Home/NavBar';
+import Skill from '../components/Home/Skills';
 
 const HomeLayouts = () => {
     return (
@@ -9,6 +10,7 @@ const HomeLayouts = () => {
             <NavBar/>
             <Hero/>
             <About/>
+            <Skill/>
         </div>
     );
 };

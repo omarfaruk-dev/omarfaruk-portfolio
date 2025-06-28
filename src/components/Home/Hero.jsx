@@ -1,8 +1,9 @@
-import React from 'react';
+
 import { FaGithub, FaLinkedin, FaTwitter, FaCodepen } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
-// import heroLottie from '../../assets/lotties/hero-lottie.json'
-import Lottie from 'react-lottie';
+import heroLottie from '../../assets/lotties/hero-lottie.json'
+import Lottie from 'lottie-react';
+
 
 const Hero = () => {
     return (
@@ -47,7 +48,7 @@ const Hero = () => {
             </div>
             {/* Right Side Image */}
             <div className="flex-1 flex items-center justify-center">
-                  {/* <Lottie animationData={heroLottie}></Lottie> */}
+                  <Lottie animationData={heroLottie}></Lottie>
                 {/* <div
                     className="w-80 h-80 flex items-center justify-center shadow-lg relative bg-primary"
                     style={{

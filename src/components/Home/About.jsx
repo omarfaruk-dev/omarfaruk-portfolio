@@ -22,6 +22,8 @@ const About = () => {
                     />
                 </div>
             </div>
+
+
             {/* Right Side Content */}
             <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-2 md:px-0">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 space-grotesk-font">About Me</h2>
