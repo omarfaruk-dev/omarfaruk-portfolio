@@ -13,12 +13,24 @@ const NavBar = () => {
     { name: "Contact", to: "contact" },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className=" fixed bg-base-200 py-3 top-0 left-0 z-99 w-full text-secondary shadow-md">
       <div className="navbar px-4 max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="navbar-start flex items-center">
-        <Logo />
+          <div
+            onClick={scrollToTop}
+            className="cursor-pointer transition-all duration-200"
+          >
+            <Logo />
+          </div>
         </div>
 
         {/* Desktop Menu + Resume Button (Right Aligned) */}
@@ -68,7 +80,15 @@ const NavBar = () => {
           style={{ minWidth: "240px" }}
         >
           <div className="flex items-center justify-between px-6 py-4 border-b border-base-100">
-            <Logo/>
+            <div
+              onClick={() => {
+                scrollToTop();
+                setSidebarOpen(false);
+              }}
+              className="cursor-pointer transition-all duration-200"
+            >
+              <Logo/>
+            </div>
             <button
               onClick={() => setSidebarOpen(false)}
               className="text-2xl text-primary"
