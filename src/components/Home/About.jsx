@@ -4,7 +4,7 @@ const About = () => {
     return (
         <section id="about" className="flex flex-col items-center py-8 md:pt-12 lg:py-16">
             {/* Section Title */}
-            <div className='w-1/2 mx-auto'>
+            <div className='w-full md:w-1/2 mx-auto'>
                 <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
                     <h2>About Me</h2>
                 </div>
@@ -13,21 +13,18 @@ const About = () => {
             {/* Content Container */}
             <div className="w-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0 my-10">
                 {/* Left Side Image */}
-                <div className="flex-1 flex items-center justify-center mb-8 md:mb-0 group">
-                    <div
-                        className="w-80 h-80 flex items-center justify-center shadow-lg relative bg-primary transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl"
-                        style={{
-                            clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)',
-                            border: '4px solid var(--tw-prose-primary, #46D0D1)'
-                        }}
-                    >
+                <div className="flex-1 flex items-center justify-center mb-8 md:mb-0">
+                    <div className="relative w-80 h-80 flex items-center justify-center border-4 border-primary rounded-md overflow-visible bg-base-100">
+                        {/* Stylish second border */}
+                        <div className="absolute inset-2 border-2 border-primary/30 rounded-md pointer-events-none z-10"></div>
+                        {/* Large background text */}
+                        <span className="absolute top-25 left-1/2 -translate-x-1/2 text-[2.5rem] md:text-6xl font-extrabold wireframe-text whitespace-nowrap select-none pointer-events-none">DEVELOPER</span>
+                        {/* <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[2.5rem] md:text-6xl font-extrabold text-primary/30 whitespace-nowrap select-none pointer-events-none">DEVELOPER</span> */}
+                        {/* Image */}
                         <img
                             src="/omar-photo.png"
                             alt="Omar Faruk"
-                            className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110"
-                            style={{
-                                clipPath: 'polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)',
-                            }}
+                            className="absolute left-1/2 bottom-0 -translate-x-1/2 w-96 h-90 object-cover z-20 rounded-lg shadow-md"
                         />
                     </div>
                 </div>
@@ -35,7 +32,7 @@ const About = () => {
                 {/* Right Side Content */}
                 <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-2 md:px-0 group">
                     <p className="text-lg md:text-xl text-secondary mb-4 space-grotesk-font group-hover:text-secondary/90 transition-colors duration-300">
-                        I'm Omar Faruk, a <span className="text-primary font-semibold group-hover:text-primary/80 transition-colors duration-300">Frontend Developer</span> focused on building beautiful, performant, and accessible web experiences. I love working with modern JavaScript frameworks and responsive design.
+                        I'm Omar Faruk, a <span className="text-primary font-semibold group-hover:text-primary/80 transition-colors duration-300">MERN Stack Developer</span> focused on building beautiful, performant, and accessible web experiences. I love working with modern JavaScript frameworks and responsive design.
                     </p>
                     <p className="text-base md:text-lg text-secondary mb-6 space-grotesk-font group-hover:text-secondary/90 transition-colors duration-300">
                         I enjoy learning new technologies, collaborating with teams, and turning creative ideas into reality. Outside of coding, I like exploring new places and sharing knowledge with the community.

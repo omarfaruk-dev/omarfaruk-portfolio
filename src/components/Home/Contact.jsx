@@ -148,7 +148,7 @@ const Contact = () => {
     <section id="contact" className="flex flex-col items-center py-8 md:py-12 lg:py-16">
       <div className="max-w-6xl w-full mx-auto px-4">
         {/* Section Title */}
-        <div className='w-1/2 mx-auto mb-16'>
+        <div className='w-full md:w-1/2 mx-auto mb-16'>
           <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
             <h2>Get In Touch</h2>
           </div>

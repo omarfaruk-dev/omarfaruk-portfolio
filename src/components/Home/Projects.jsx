@@ -7,7 +7,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-8 md:py-12 lg:py-16">
-      <div className="w-1/2 mx-auto mb-16">
+      <div className="w-full md:w-1/2 mx-auto mb-16">
         <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
         <h2>My Projects</h2>
       </div>
