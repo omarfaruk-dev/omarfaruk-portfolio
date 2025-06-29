@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaJs, FaReact, FaNodeJs, FaFigma, FaCode, FaGithub } from 'react-icons/fa';
 import ProgressBar from '@ramonak/react-progress-bar';
-import { SiAdobeillustrator, SiAdobephotoshop, SiExpress, SiFirebase, SiMongodb, SiRedux, SiTailwindcss } from 'react-icons/si';
+import { SiAdobeillustrator, SiAdobephotoshop, SiExpress, SiFirebase, SiMongodb, SiRedux, SiTailwindcss, SiNetlify, SiVercel } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 
 const iconMap = {
@@ -18,6 +18,8 @@ const iconMap = {
   Illustrator: <SiAdobeillustrator className="text-orange-600 text-5xl" />,
   VSCode: <VscVscode className="text-blue-400 text-5xl" />,
   GitHub: <FaGithub className="text-white text-5xl" />,
+  Netlify: <SiNetlify className="text-green-400 text-5xl" />,
+  Vercel: <SiVercel className="text-black dark:text-white text-5xl" />,
 };
 
 const skillData = {
@@ -31,20 +33,20 @@ const skillData = {
     { name: "Firebase", value: 65 },
   ],
   Others: [
-    { name: "Redux", value: 80 },
-  ],
-  Tools: [
-    { name: "GitHub", value: 90 },
     { name: "Figma", value: 80 },
-    { name: "VSCode", value: 95 },
-    { name: "Cursor", value: 70 },
     { name: "Photoshop", value: 75 },
     { name: "Illustrator", value: 70 },
   ],
+  Tools: [
+    { name: "GitHub", value: 90 },
+    { name: "VSCode", value: 95 },
+    { name: "Cursor", value: 70 },
+    { name: "Netlify", value: 70 },
+    { name: "Vercel", value: 70 },
+  ],
 };
 
-
-const tabs = ['Web', 'Others', 'Tools'];
+const tabs = ['Web', 'Tools', 'Others'];
 
 const Skill = () => {
   const [activeTab, setActiveTab] = useState('Web');
