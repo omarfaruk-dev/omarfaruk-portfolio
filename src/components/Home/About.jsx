@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const About = () => {
     return (
@@ -14,11 +15,11 @@ const About = () => {
             <div className="w-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0 my-10">
                 {/* Left Side Image */}
                 <div className="flex-1 flex items-center justify-center mb-8 md:mb-0">
-                    <div className="relative w-80 h-80 flex items-center justify-center border-4 border-primary rounded-md overflow-visible bg-base-100">
+                    <div className="relative w-80 h-80 flex  items-center justify-center border-4 border-primary rounded-md overflow-visible bg-base-100">
                         {/* Stylish second border */}
                         <div className="absolute inset-2 border-2 border-primary/30 rounded-md pointer-events-none z-10"></div>
                         {/* Large background text */}
-                        <span className="absolute top-25 left-1/2 -translate-x-1/2 text-[2.5rem] md:text-6xl font-extrabold wireframe-text whitespace-nowrap select-none pointer-events-none">DEVELOPER</span>
+                        <span className="absolute top-25 left-1/2 -translate-x-1/2 text-5xl md:text-6xl font-extrabold wireframe-text whitespace-nowrap select-none pointer-events-none">DEVELOPER</span>
                         {/* <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[2.5rem] md:text-6xl font-extrabold text-primary/30 whitespace-nowrap select-none pointer-events-none">DEVELOPER</span> */}
                         {/* Image */}
                         <img
@@ -30,7 +31,7 @@ const About = () => {
                 </div>
 
                 {/* Right Side Content */}
-                <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-2 md:px-0 group">
+                <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-4 md:px-0 group">
                     <p className="text-lg md:text-xl text-secondary mb-4 space-grotesk-font group-hover:text-secondary/90 transition-colors duration-300">
                         I'm Omar Faruk, a <span className="text-primary font-semibold group-hover:text-primary/80 transition-colors duration-300">MERN Stack Developer</span> focused on building beautiful, performant, and accessible web experiences. I love working with modern JavaScript frameworks and responsive design.
                     </p>
@@ -47,12 +48,15 @@ const About = () => {
                         >
                             Get Resume
                         </a>
-                        <a 
-                            href="#skills" 
+                        <Link 
+                            to="skills" 
+                            smooth={true}
+                            duration={1500}
+                            offset={-80}
                             className="btn btn-outline text-primary font-semibold hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary shadow-sm transform hover:-translate-y-1"
                         >
                             My Skills
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

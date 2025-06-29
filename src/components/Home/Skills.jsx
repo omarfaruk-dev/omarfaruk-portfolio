@@ -113,7 +113,7 @@ const Skill = () => {
           {skillData[activeTab].map((skill, index) => (
             <div
               key={index}
-              className="bg-base-200/50 backdrop-blur-sm p-6 rounded-md shadow-lg border border-primary/20 flex items-center gap-6 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 group"
+              className="bg-base-200/50 backdrop-blur-sm p-6 rounded-md shadow-lg border border-primary/20 flex items-center hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="flex flex-col items-center justify-center mr-4">
                 <div className="transition-transform duration-300 group-hover:scale-110">

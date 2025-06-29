@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
 import { FaArrowUp, FaStar } from 'react-icons/fa';
 import { CgGitFork } from "react-icons/cg";
@@ -12,8 +12,32 @@ const thanks = [
 const githubUrl = 'https://github.com/omarfaruk-dev';
 
 const Footer = () => {
+  const scrollTopBtnRef = useRef(null);
+
+  useEffect(() => {
+    const btn = scrollTopBtnRef.current;
+    if (!btn) return;
+    const handleClick = (e) => {
+      e.preventDefault();
+      const start = window.scrollY;
+      const duration = 1500;
+      const startTime = performance.now();
+      function scrollStep(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        window.scrollTo(0, start * (1 - progress));
+        if (progress < 1) {
+          requestAnimationFrame(scrollStep);
+        }
+      }
+      requestAnimationFrame(scrollStep);
+    };
+    btn.addEventListener('click', handleClick);
+    return () => btn.removeEventListener('click', handleClick);
+  }, []);
+
   return (
-    <footer className="bg-base-200/50 py-6 text-secondary border-t border-anbr">
+    <footer className="bg-base-200/50 py-6 text-secondary border-t border-primary/20">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center md:items-center justify-between gap-y-4 md:gap-y-0">
         {/* Thanks Buttons */}
         <div className="flex gap-2 mb-2 md:mb-0">
@@ -38,7 +62,7 @@ const Footer = () => {
             <span className="font-bold ml-2">BY OMAR FARUK</span>
           </span>
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            ref={scrollTopBtnRef}
             className="ml-2 flex items-center justify-center w-8 h-8 bg-primary rounded-md shadow-md text-base-100 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer"
             aria-label="Back to top"
           >

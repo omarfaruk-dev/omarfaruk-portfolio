@@ -12,6 +12,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [copiedIndex, setCopiedIndex] = useState(null);
 
   // Load EmailJS script
   useEffect(() => {
@@ -101,19 +102,19 @@ const Contact = () => {
       icon: <FaEnvelope className="text-2xl" />,
       title: "Email",
       value: "omarfaruk.dev@gmail.com",
-      link: "mailto:omarfaruk.dev@gmail.com"
+      isCopy: true
     },
     {
       icon: <FaPhone className="text-2xl" />,
       title: "Phone / Whatsapp",
       value: "+8801739460198",
-      link: "tel:+8801739460198"
+      isCopy: true
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
       title: "Location",
       value: "Bogura, Bangladesh",
-      link: "#"
+      isCopy: false
     }
   ];
 
@@ -144,6 +145,12 @@ const Contact = () => {
     }
   ];
 
+  const handleCopy = (value, idx) => {
+    navigator.clipboard.writeText(value);
+    setCopiedIndex(idx);
+    setTimeout(() => setCopiedIndex(null), 1200);
+  };
+
   return (
     <section id="contact" className="flex flex-col items-center py-8 md:py-12 lg:py-16">
       <div className="max-w-6xl w-full mx-auto px-4">
@@ -168,12 +175,11 @@ const Contact = () => {
             {/* Contact Info Cards */}
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
-                <a
+                <div
                   key={index}
-                  href={info.link}
-                  className="group flex items-center gap-4 p-4 bg-base-200/50 backdrop-blur-sm rounded-md border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
+                  className="group flex items-center gap-4 p-4 bg-base-200/50 backdrop-blur-sm rounded-xl border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-md group-hover:bg-primary/20 transition-colors duration-300">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
                     <div className="text-primary group-hover:scale-110 transition-transform duration-300">
                       {info.icon}
                     </div>
@@ -182,11 +188,14 @@ const Contact = () => {
                     <h4 className="font-semibold text-secondary group-hover:text-secondary/90 transition-colors duration-300">
                       {info.title}
                     </h4>
-                    <p className="text-secondary/80 group-hover:text-secondary/70 transition-colors duration-300">
-                      {info.value}
+                    <p
+                      className={`text-secondary/80 group-hover:text-secondary/70 transition-colors duration-300 ${info.isCopy ? 'cursor-pointer hover:text-primary font-semibold' : ''}`}
+                      onClick={info.isCopy ? () => handleCopy(info.value, index) : undefined}
+                    >
+                      {info.value} {copiedIndex === index && info.isCopy && <span className="ml-2 text-primary text-xs">Copied to clipboard!</span>}
                     </p>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
 

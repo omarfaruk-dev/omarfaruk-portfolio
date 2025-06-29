@@ -32,7 +32,7 @@ const NavBar = () => {
 
   return (
     <div className={`fixed py-3 top-0 left-0 z-99 w-full text-secondary shadow-md transition-all duration-300 ${
-      isScrolled ? 'bg-base-200' : 'bg-base-100'
+      isScrolled ? 'bg-base-200 border-b border-primary/10' : 'bg-base-100 border-b border-primary/20'
     }`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="navbar flex items-center justify-between">
@@ -54,7 +54,7 @@ const NavBar = () => {
                   <Link
                     to={item.to}
                     smooth={true}
-                    duration={500}
+                    duration={1500}
                     spy={true}
                     offset={-80}
                     className="cursor-pointer text-secondary hover:text-primary transition-colors duration-200 tracking-wide text-base font-medium"
