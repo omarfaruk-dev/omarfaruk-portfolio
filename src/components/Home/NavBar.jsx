@@ -47,7 +47,7 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Menu + Resume Button (Right Aligned) */}
-          <div className="hidden lg:flex flex-1 justify-end items-center gap-8">
+          <div className="hidden md:flex flex-1 justify-end items-center gap-8">
             <ul className="flex gap-10 items-center">
               {menuItems.map((item) => (
                 <li key={item.to}>
@@ -57,7 +57,7 @@ const NavBar = () => {
                     duration={1500}
                     spy={true}
                     offset={-80}
-                    className="cursor-pointer text-secondary hover:text-primary transition-colors duration-200 tracking-wide text-base font-medium"
+                    className="cursor-pointer text-secondary hover:text-primary transition-all duration-300 tracking-wide text-base"
                   >
                     {item.name.toUpperCase()}
                   </Link>
@@ -75,7 +75,7 @@ const NavBar = () => {
           </div>
 
           {/* Hamburger Icon */}
-          <div className="lg:hidden ml-auto z-99 flex items-center justify-center">
+          <div className="md:hidden ml-auto z-99 flex items-center justify-center">
             <button
               onClick={() => setSidebarOpen(true)}
               className="text-2xl text-primary hover:shadow-md hover:shadow-primary/20 transition-all"
@@ -113,7 +113,7 @@ const NavBar = () => {
                   <Link
                     to={item.to}
                     smooth={true}
-                    duration={500}
+                    duration={1500}
                     spy={true}
                     offset={-80}
                     className="cursor-pointer text-secondary hover:text-primary text-lg font-medium"

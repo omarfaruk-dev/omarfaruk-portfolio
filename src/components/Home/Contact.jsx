@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FaCodepen } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,11 +21,9 @@ const Contact = () => {
     script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
     script.async = true;
     script.onload = () => {
-      console.log('EmailJS loaded successfully');
       // Initialize EmailJS with your public key
       if (window.emailjs) {
         window.emailjs.init('-k5QANi11cFGNxl1i'); // Replace with your actual public key
-        console.log('EmailJS initialized');
       }
     };
     script.onerror = () => {
@@ -61,7 +60,7 @@ const Contact = () => {
     }
 
     try {
-      console.log('Attempting to send email...');
+    
       
       // Send email using EmailJS
       const result = await window.emailjs.send(
@@ -79,7 +78,7 @@ const Contact = () => {
         }
       );
 
-      console.log('Email sent successfully:', result);
+
       setSubmitStatus('success');
       
       // Reset form
@@ -161,7 +160,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -222,18 +221,20 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-base-200/50 backdrop-blur-sm p-8 rounded-md border border-primary/20 shadow-lg">
-            <h3 className="text-2xl font-bold text-primary mb-6 space-grotesk-font">Send Message</h3>
+            <h3 className="text-2xl font-bold text-primary mb-6 space-grotesk-font ">Send Message</h3>
             
             {/* Status Messages */}
             {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
-                <p className="font-medium">✅ Message sent successfully! I'll get back to you soon.</p>
+              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center gap-3">
+                <FaCheckCircle className="text-green-500 text-2xl" />
+                <p className="font-medium">Message sent successfully! I'll get back to you soon.</p>
               </div>
             )}
             
             {submitStatus === 'error' && (
-              <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
-                <p className="font-medium">❌ Failed to send message. Please complete EmailJS setup or contact me directly at omarfaruk.dev@gmail.com</p>
+              <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg flex items-center gap-3">
+                <FaTimesCircle className="text-red-500 text-2xl" />
+                <p className="font-medium">Failed to send message. Please complete EmailJS setup or contact me directly at omarfaruk.dev@gmail.com</p>
               </div>
             )}
 
