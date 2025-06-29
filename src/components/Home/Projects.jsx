@@ -50,7 +50,7 @@ const Projects = () => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-sm btn-primary text-base-100 hover:bg-primary/90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 shadow-md"
+                  className="btn btn-sm btn-primary text-base-100 hover:bg-primary/90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 shadow-md min-w-[90px]"
                 >
                   <FaGlobe className="mr-1" /> Live
                 </a>
@@ -58,25 +58,15 @@ const Projects = () => {
                   href={project.client}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-sm btn-outline btn-primary hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary"
+                  className="btn btn-sm btn-outline btn-primary hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary min-w-[90px]"
                 >
                   <FaGithub /> Client
                 </a>
-                <a
-                  href={project.server}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-sm btn-outline btn-primary hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary"
-                >
-                  <FaGithub /> Server
-                </a>
-              </div>
-              <div className="card-actions justify-end mt-6">
                 <button
-                  className="btn btn-primary btn-outline btn-sm hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary shadow-sm"
+                  className="btn btn-sm btn-outline btn-primary hover:bg-primary/80 hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary min-w-[90px]"
                   onClick={() => setSelectedProject(project)}
                 >
-                  View Details
+                  <FaCode className="mr-1" /> Details
                 </button>
               </div>
             </div>
@@ -122,11 +112,13 @@ const Projects = () => {
       <p className="mb-4 text-sm text-secondary/80">{selectedProject.about}</p>
 
       {/* Description */}
-      <p className="mb-4 text-secondary">{selectedProject.description}</p>
+      <p className="mb-4 text-secondary/80">
+      <span className="font-semibold text-primary">Details:</span>{" "}
+        {selectedProject.description}</p>
 
       {/* Challenges */}
-      <p className="mb-4 text-secondary">
-        <span className="font-semibold text-secondary">Challenges:</span>{" "}
+      <p className="mb-4 text-secondary/80">
+        <span className="font-semibold text-primary">Challenges:</span>{" "}
         {selectedProject.challenges}
       </p>
 
@@ -153,14 +145,6 @@ const Projects = () => {
           className="btn btn-sm btn-outline btn-primary hover:shadow-md hover:shadow-primary/20 transition-all"
         >
           <FaGithub /> Client
-        </a>
-        <a
-          href={selectedProject.server}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-sm btn-outline btn-primary hover:shadow-md hover:shadow-primary/20 transition-all"
-        >
-          <FaGithub /> Server
         </a>
       </div>
 

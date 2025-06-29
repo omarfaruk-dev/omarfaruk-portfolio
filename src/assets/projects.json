@@ -1,14 +1,14 @@
 [
   {
     "title": "ROOMLY",
-    "about": "A roommate finder app where users can add, find, or manage roommates easily.",
+    "about": "Roomly helps users find and manage roommates. Create profiles, browse listings, and filter matches by preferences, budget, and location.",
     "technology": ["React", "Firebase", "MongoDB", "Express"],
     "thumb_img": "https://i.postimg.cc/FFgSc08t/roomly.jpg",
     "live": "https://roomly-app.netlify.app",
     "client": "https://github.com/omarfaruk-dev/roomly-client.git",
     "server": "https://github.com/omarfaruk-dev/roomly-server.git",
-    "description": "Roomly helps users search and connect with potential roommates based on preferences and location. Users can post listings, view profiles, and manage shared spaces in one streamlined platform.",
-    "challenges": "Implementing real-time filtering and search functionality with Firebase and managing secure user authentication across client and server."
+    "description": "Roomly is a comprehensive roommate finder and shared housing platform that connects users based on lifestyle preferences, budget, and location. The app allows users to create detailed profiles, search and filter listings, chat securely with potential roommates, and manage shared expenses and tasks. Roomly's intuitive interface and advanced matching algorithm make it easy to find compatible roommates and manage co-living arrangements efficiently.",
+    "challenges": "Building a robust real-time chat and notification system for seamless communication. Designing and implementing a smart matching algorithm to suggest compatible roommates. Ensuring user privacy and security, including profile verification and secure messaging. Handling complex search and filter queries efficiently for large datasets. Managing shared expenses and tasks with real-time updates and notifications. Creating a responsive, accessible UI that works well on both desktop and mobile devices."
   },
   {
     "title": "FOODIO",
@@ -18,18 +18,18 @@
     "live": "https://foodi0.web.app",
     "client": "https://github.com/omarfaruk-dev/foodio-client",
     "server": "https://github.com/omarfaruk-dev/foodio-server",
-    "description": "Foodio enables food businesses to manage menus, orders, and customer interactions through a responsive web interface. Users can browse dishes, place orders, and track order status in real-time.",
-    "challenges": "Designing dynamic role-based dashboards for admins and users, and ensuring secure and smooth checkout using Firebase auth and server-side validation."
+    "description": "Foodio is a full-featured restaurant management and online food ordering platform designed for both restaurant owners and customers. Restaurant owners can manage menus, track orders, and analyze sales, while customers can browse menus, place orders, and make secure payments. Foodio supports real-time order tracking, role-based dashboards for admins, staff, and customers, and seamless communication between all parties. The platform is optimized for both desktop and mobile, ensuring a smooth experience for all users.",
+    "challenges": "Implementing real-time order tracking and status updates for both customers and restaurant staff. Designing flexible, role-based dashboards to accommodate admins, staff, and customers with different permissions and views. Integrating secure payment gateways and ensuring PCI compliance. Managing complex menu structures, customizations, and dynamic pricing. Handling high concurrency and ensuring data consistency during peak order times. Creating a responsive, intuitive UI that works seamlessly across devices."
   },
   {
-    "title": "ROOMLY",
-    "about": "A roommate finder app where users can add, find, or manage roommates easily.",
-    "technology": ["React", "Firebase", "MongoDB", "Express"],
-    "thumb_img": "https://i.postimg.cc/FFgSc08t/roomly.jpg",
-    "live": "https://roomly-app.netlify.app",
-    "client": "https://github.com/omarfaruk-dev/roomly-client.git",
-    "server": "https://github.com/omarfaruk-dev/roomly-server.git",
-    "description": "Roomly helps users search and connect with potential roommates based on preferences and location. Users can post listings, view profiles, and manage shared spaces in one streamlined platform.",
-    "challenges": "Implementing real-time filtering and search functionality with Firebase and managing secure user authentication across client and server."
+    "title": "QUICK PAY",
+    "about": "Quick Pay lets users pay bills instantly. Manage payments, view history, and enjoy a secure, user-friendly experience for all your transactions.",
+    "technology": ["React", "Firebase", "tailwindcss"],
+    "thumb_img": "https://i.ibb.co.com/7tVdwh6x/quick-pay-mockup.jpg",
+    "live": "https://quick-pay-app.netlify.app",
+    "client": "https://github.com/omarfaruk-dev/quick-pay.git",
+    "server": "https://github.com/omarfaruk-dev/quick-pay.git",
+    "description": "Quick Pay is a modern, secure, and user-friendly payment application designed to simplify online transactions. It allows users to send and receive money instantly, manage their transaction history, and connect multiple payment methods. The app features a clean interface, real-time notifications, and robust security measures to ensure safe and seamless payments for both individuals and businesses.",
+    "challenges": "Integrating multiple payment gateways and ensuring compatibility across platforms. Implementing robust security features (encryption, fraud detection, secure authentication). Handling real-time transaction updates and notifications. Designing a user interface that is both intuitive and accessible for a wide range of users. Ensuring compliance with financial regulations and data privacy standards. Managing error handling and edge cases for failed or delayed transactions."
   }
 ]
