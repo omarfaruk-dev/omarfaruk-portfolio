@@ -171,9 +171,9 @@ const Contact = () => {
                 <a
                   key={index}
                   href={info.link}
-                  className="group flex items-center gap-4 p-4 bg-base-200/50 backdrop-blur-sm rounded-xl border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
+                  className="group flex items-center gap-4 p-4 bg-base-200/50 backdrop-blur-sm rounded-md border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-md group-hover:bg-primary/20 transition-colors duration-300">
                     <div className="text-primary group-hover:scale-110 transition-transform duration-300">
                       {info.icon}
                     </div>
@@ -200,7 +200,7 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group flex items-center justify-center w-12 h-12 bg-base-200/50 backdrop-blur-sm rounded-lg border border-primary/20 text-secondary/80 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1 ${social.color}`}
+                    className={`group flex items-center justify-center w-12 h-12 bg-base-200/50 backdrop-blur-sm rounded-md border border-primary/20 text-secondary/80 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1 ${social.color}`}
                   >
                     <div className="group-hover:scale-110 transition-transform duration-300">
                       {social.icon}
@@ -212,18 +212,18 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-base-200/50 backdrop-blur-sm p-8 rounded-xl border border-primary/20 shadow-lg">
+          <div className="bg-base-200/50 backdrop-blur-sm p-8 rounded-md border border-primary/20 shadow-lg">
             <h3 className="text-2xl font-bold text-primary mb-6 space-grotesk-font">Send Message</h3>
             
             {/* Status Messages */}
             {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
                 <p className="font-medium">✅ Message sent successfully! I'll get back to you soon.</p>
               </div>
             )}
             
             {submitStatus === 'error' && (
-              <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+              <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
                 <p className="font-medium">❌ Failed to send message. Please complete EmailJS setup or contact me directly at omarfaruk.dev@gmail.com</p>
               </div>
             )}
@@ -242,7 +242,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-base-100 border border-primary/20 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-secondary placeholder-secondary/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 bg-base-100 border border-primary/20 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-secondary placeholder-secondary/50 disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Your name"
                   />
                 </div>
@@ -258,7 +258,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-base-100 border border-primary/20 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-secondary placeholder-secondary/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 bg-base-100 border border-primary/20 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-secondary placeholder-secondary/50 disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -275,7 +275,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 bg-base-100 border border-primary/20 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-secondary placeholder-secondary/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 bg-base-100 border border-primary/20 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-secondary placeholder-secondary/50 disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="What's this about?"
                 />
               </div>
@@ -291,14 +291,14 @@ const Contact = () => {
                   required
                   rows="5"
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 bg-base-100 border border-primary/20 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-secondary placeholder-secondary/50 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 bg-base-100 border border-primary/20 rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-secondary placeholder-secondary/50 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tell me about your project or just say hello!"
                 />
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 py-3 bg-primary text-base-100 font-semibold rounded-lg hover:bg-primary/90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 shadow-md transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full px-6 py-3 bg-primary text-base-100 font-semibold rounded-md hover:bg-primary/90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 shadow-md transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>

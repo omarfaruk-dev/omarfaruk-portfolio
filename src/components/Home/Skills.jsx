@@ -97,7 +97,7 @@ const Skill = () => {
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-2 rounded border border-primary font-semibold text-lg transition-all duration-200 focus:outline-none hover:shadow-md hover:shadow-primary/20 transform hover:-translate-y-1 ${
+              className={`px-6 py-2 rounded-md border border-primary font-semibold text-lg transition-all duration-200 focus:outline-none hover:shadow-md hover:shadow-primary/20 transform hover:-translate-y-1 ${
                 activeTab === tab
                   ? 'bg-primary text-base-100'
                   : 'text-primary hover:bg-primary/10'
@@ -113,7 +113,7 @@ const Skill = () => {
           {skillData[activeTab].map((skill, index) => (
             <div
               key={index}
-              className="bg-base-200/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-primary/20 flex items-center gap-6 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 group"
+              className="bg-base-200/50 backdrop-blur-sm p-6 rounded-md shadow-lg border border-primary/20 flex items-center gap-6 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="flex flex-col items-center justify-center mr-4">
                 <div className="transition-transform duration-300 group-hover:scale-110">

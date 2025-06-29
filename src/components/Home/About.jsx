@@ -22,7 +22,7 @@ const About = () => {
                         }}
                     >
                         <img
-                            src="/Headshot.jpg"
+                            src="/omar-photo.png"
                             alt="Omar Faruk"
                             className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110"
                             style={{
@@ -46,7 +46,7 @@ const About = () => {
                             href="/resume.pdf" 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="px-6 py-2 rounded bg-primary text-base-100 font-semibold hover:bg-primary/90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 shadow-md transform hover:-translate-y-1"
+                            className="px-6 py-2 rounded-md bg-primary text-base-100 font-semibold hover:bg-primary/90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 shadow-md transform hover:-translate-y-1"
                         >
                             Get Resume
                         </a>

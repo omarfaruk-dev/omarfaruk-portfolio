@@ -17,7 +17,7 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <div
             key={index}
-            className="group card bg-base-200/50 backdrop-blur-sm shadow-lg border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 rounded-xl overflow-hidden"
+            className="group card bg-base-200/50 backdrop-blur-sm shadow-lg border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 rounded-md overflow-hidden"
           >
             <figure className="relative overflow-hidden">
               <img
@@ -115,7 +115,7 @@ const Projects = () => {
       <img
         src={selectedProject.thumb_img}
         alt={selectedProject.title}
-        className="w-full h-110 object-cover rounded-xl mb-4 border border-base-300"
+        className="w-full h-110 object-cover rounded-md mb-4 border border-base-300"
       />
 
       {/* About */}
