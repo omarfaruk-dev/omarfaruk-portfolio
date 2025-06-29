@@ -109,11 +109,11 @@ const Skill = () => {
           ))}
         </div>
         {/* Skill Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
           {skillData[activeTab].map((skill, index) => (
             <div
               key={index}
-              className="bg-base-200/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-primary/20 flex items-center gap-6 hover:shadow-2xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 group"
+              className="bg-base-200/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-primary/20 flex items-center gap-6 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="flex flex-col items-center justify-center mr-4">
                 <div className="transition-transform duration-300 group-hover:scale-110">

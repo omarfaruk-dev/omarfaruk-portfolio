@@ -10,8 +10,8 @@ import Skill from '../components/Home/Skills';
 const HomeLayouts = () => {
     return (
         <div>
-            <div className="max-w-7xl mx-auto p-4">
-                <NavBar />
+            <NavBar />
+            <div className="max-w-7xl mx-auto px-4">
                 <Hero />
                 <About />
                 <Skill />

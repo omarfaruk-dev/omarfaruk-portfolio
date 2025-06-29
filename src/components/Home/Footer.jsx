@@ -1,75 +1,49 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { FaArrowUp, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaArrowUp, FaStar } from 'react-icons/fa';
+import { CgGitFork } from "react-icons/cg";
+
+const thanks = [
+  { label: 'THANKS', key: 'english' },
+  { label: 'شکریہ', key: 'urdu' },
+  { label: 'ধন্যবাদ', key: 'bengali' },
+];
+
+const githubUrl = 'https://github.com/omarfaruk-dev';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  
-  const contactInfo = [
-    {
-      icon: <FaEnvelope className="text-sm" />,
-      text: "omarfaruk.dev@gmail.com"
-    },
-    {
-      icon: <FaPhone className="text-sm" />,
-      text: "+8801739460198"
-    },
-    {
-      icon: <FaMapMarkerAlt className="text-sm" />,
-      text: "Bogura, Bangladesh"
-    }
-  ];
-
   return (
-    <footer className="bg-base-200 py-6 text-secondary border-t border-primary/20">
-      <div className="max-w-7xl px-4 mx-auto">
-        {/* Main Footer Content - Single Row */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Contact Info */}
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="flex items-center gap-2 text-sm text-secondary/70">
-              <span className="font-semibold">Contact:</span>
+    <footer className="bg-base-200/50 py-6 px-4 text-secondary border-t border-anbr">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Thanks Buttons */}
+        <div className="flex gap-2">
+          {thanks.map((item) => (
+            <div key={item.key} className="flex flex-col items-center">
+              <span className="bg-[#232e3e] px-4 py-1 rounded text-secondary font-semibold tracking-wide text-sm">
+                {item.label}
+              </span>
+              <span className="w-full h-1 bg-anbr rounded-b mt-1" style={{width: '80%'}}></span>
             </div>
-            {contactInfo.map((info, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm text-secondary/70">
-                <span className="text-primary">{info.icon}</span>
-                <span>{info.text}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Tech Stack */}
-          <div className="flex items-center gap-4 text-sm text-secondary/70">
-            <span className="font-semibold">Tech Stack:</span>
-            <span>React • Tailwind CSS • JavaScript • Node.js</span>
-          </div>
-
-          {/* Quick Links */}
-          <div className="flex items-center gap-4">
-            <span className="text-sm font-semibold text-secondary">Go to Top</span>
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              className="group flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg border border-primary/20 text-primary hover:bg-primary/20 hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-              aria-label="Back to top"
-            >
-              <FaArrowUp className="group-hover:scale-110 transition-transform duration-300 text-sm" />
-            </Link>
-          </div>
+          ))}
         </div>
-
-        {/* Divider */}
-        <div className="border-t border-primary/20 my-4"></div>
-
-        {/* Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-secondary/70">
-          <p>
-            © {currentYear} Omar Faruk. All rights reserved.
-          </p>
-          <p className="text-center md:text-right">
-            Built with React & Tailwind CSS
-          </p>
+        {/* Right Side: Star, Fork, By Me, Go to Top */}
+        <div className="flex items-center gap-2">
+          <span className="flex items-center gap-1 text-xs md:text-sm text-secondary">
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-anbr transition-colors flex items-center gap-1 link-primary">
+              <FaStar className="text-anbr" /> STAR
+            </a>
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="ml-2 hover:underline hover:text-anbr transition-colors flex items-center gap-1 link-primary">
+              <CgGitFork  className="text-anbr text-base" /> FORK
+            </a>
+            <span className="font-bold ml-2">BY OMAR FARUK</span>
+          </span>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="ml-2 flex items-center justify-center w-8 h-8 bg-primary rounded shadow-md text-base-100 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer"
+            aria-label="Back to top"
+          >
+            <FaArrowUp className="text-lg" />
+          </button>
         </div>
       </div>
     </footer>

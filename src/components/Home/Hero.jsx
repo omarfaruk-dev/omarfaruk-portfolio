@@ -1,7 +1,7 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaCodepen } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaCodepen } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { Link } from 'react-scroll';
 import { Typewriter } from 'react-simple-typewriter';
-// import heroLottie from '../../assets/lotties/hero-lottie.json'
-// import Lottie from 'lottie-react';
 
 
 const Hero = () => {
@@ -9,8 +9,9 @@ const Hero = () => {
         <section className="mt-16 w-full min-h-[80vh] flex flex-col lg:flex-row  items-center justify-between py-12 md:py-16 lg:py-24 gap-10 md:gap-10">
             {/* Left Side Content */}
             <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-2 md:px-0">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary space-grotesk-font">Hi, I'm Omar Faruk</h1>
-                <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-secondary space-grotesk-font">
+                <h3 className='text-2xl font-semibold text-primary space-grotesk-font'>Hello! I am </h3>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-secondary space-grotesk-font">Omar Faruk</h1>
+                <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-primary space-grotesk-font">
                     <Typewriter
                         words={['Frontend Developer', 'MERN Stack Developer', 'JavaScript Lover']}
                         loop={true}
@@ -26,30 +27,29 @@ const Hero = () => {
                 </p>
                 {/* Social Icons */}
                 <div className="flex gap-4 mt-2 mb-6">
-                    <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-2xl text-secondary hover:text-primary hover:shadow hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="https://github.com/omarfaruk-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
                         <FaGithub />
                     </a>
-                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="https://linkedin.com/in/dev-omar-faruk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
                         <FaLinkedin />
                     </a>
-                    <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
-                        <FaTwitter />
+                    <a href="https://x.com/omarfarukb7" target="_blank" rel="noopener noreferrer" aria-label="x" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
+                        <FaXTwitter />
                     </a>
-                    <a href="https://codepen.io/your-codepen" target="_blank" rel="noopener noreferrer" aria-label="CodePen" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="https://codepen.io/omarfaruk-dev" target="_blank" rel="noopener noreferrer" aria-label="CodePen" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
                         <FaCodepen />
                     </a>
                 </div>
                 {/* Action Buttons */}
                 <div className="flex gap-4">
                     <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-4 md:px-6 py-2 rounded bg-primary text-base-100 font-semibold hover:bg-opacity-90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 transform hover:-translate-y-1">Get Resume</a>
-                    <a href="#about" className="px-4 md:px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 transform hover:-translate-y-1">About Me</a>
+                    <Link to="contact" smooth={true} duration={500} className="px-4 md:px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 transform hover:-translate-y-1 cursor-pointer">Contact Me</Link>
                 </div>
             </div>
-            {/* Right Side Image */}
+            {/* Right Side code block */}
             <div className="flex-1 flex items-center justify-center">
                 {/* Branded Code Block Interface */}
-                <div className="w-full max-w-full md:w-[600px] bg-base-200 border-2 border-primary rounded-xl shadow-xl p-3 md:p-6 relative font-mono text-sm overflow-x-auto" style={{
-                  borderRadius: '1rem',
+                <div className="w-full max-w-full md:w-[600px] bg-base-200 border-2 border-primary shadow-xl p-3 md:p-6 relative font-mono text-sm overflow-x-auto rounded-md" style={{
                   boxShadow: '0 8px 32px 0 rgba(24, 106, 121, 0.25)',
                   position: 'relative',
                 }}>

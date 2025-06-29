@@ -6,7 +6,7 @@ const ThemeToggle = () => {
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('careerLoop-theme');
       return savedTheme ? savedTheme : 'light';
-    }
+    }N
     return 'light';
   });
 

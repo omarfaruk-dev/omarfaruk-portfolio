@@ -17,7 +17,7 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <div
             key={index}
-            className="group card bg-base-200/50 backdrop-blur-sm shadow-lg border border-primary/20 hover:shadow-2xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 rounded-xl overflow-hidden"
+            className="group card bg-base-200/50 backdrop-blur-sm shadow-lg border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 rounded-xl overflow-hidden"
           >
             <figure className="relative overflow-hidden">
               <img
@@ -84,15 +84,27 @@ const Projects = () => {
         ))}
       </div>
 
+      {/* See More Button */}
+      <div className="flex justify-center mt-12">
+        <a
+          href="https://github.com/omarfaruk-dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary btn-outline text-lg font-semibold hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary transform hover:-translate-y-1 px-8 py-3"
+        >
+          See More Projects
+        </a>
+      </div>
+
       {/* Modal */}
 {selectedProject && (
   <dialog
     id="project_modal"
-    className="modal modal-open"
+    className="modal modal-open border border-primary/20 backdrop-blur-xs"
     onClick={() => setSelectedProject(null)}
   >
     <div
-      className="modal-box max-w-3xl"
+      className="modal-box max-w-3xl border border-primary/20"
       onClick={(e) => e.stopPropagation()}
     >
       <h3 className="font-bold text-2xl mb-4 text-primary">
@@ -155,7 +167,7 @@ const Projects = () => {
       {/* Close Button */}
       <div className="modal-action">
         <button
-          className="btn btn-error btn-outline hover:shadow-md hover:shadow-error/20 transition-all"
+          className="btn btn-primary btn-outline hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all"
           onClick={() => setSelectedProject(null)}
         >
           Close

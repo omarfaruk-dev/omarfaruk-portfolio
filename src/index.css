@@ -25,7 +25,7 @@
   --color-accent: #706F6F;
 }
 
-@plugin "daisyui/theme" {
+/* @plugin "daisyui/theme" {
   name: "dark";
   default: true;
   --color-primary: #EB144C;
@@ -34,5 +34,5 @@
   --color-base-200: #1A1A1A ;
   --color-base-300: #E7E7E7;
   --color-accent: ##f8faff;
-}
+} */
 

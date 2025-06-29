@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaCodepen } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -120,24 +122,30 @@ const Contact = () => {
       icon: <FaLinkedin className="text-xl" />,
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/dev-omar-faruk",
-      color: "hover:text-blue-600"
+      color: "hover:text-primary"
     },
     {
       icon: <FaGithub className="text-xl" />,
       name: "GitHub",
       url: "https://github.com/omarfaruk-dev",
-      color: "hover:text-gray-700"
+      color: "hover:text-primary"
     },
     {
-      icon: <FaTwitter className="text-xl" />,
-      name: "Twitter",
-      url: "https://twitter.com/omarfarukb7",
-      color: "hover:text-blue-400"
+      icon: <FaXTwitter className="text-xl" />,
+      name: "X",
+      url: "https://x.com/omarfarukb7",
+      color: "hover:text-primary"
+    },
+    {
+      icon: <FaCodepen className="text-xl" />,
+      name: "CodePen",
+      url: "https://codepen.io/omarfaruk-dev",
+      color: "hover:text-primary"
     }
   ];
 
   return (
-    <section id="contact" className="flex flex-col items-center py-8 md:py-12 lg:py-16 bg-base-100">
+    <section id="contact" className="flex flex-col items-center py-8 md:py-12 lg:py-16">
       <div className="max-w-6xl w-full mx-auto px-4">
         {/* Section Title */}
         <div className='w-1/2 mx-auto mb-16'>
@@ -163,7 +171,7 @@ const Contact = () => {
                 <a
                   key={index}
                   href={info.link}
-                  className="group flex items-center gap-4 p-4 bg-base-200/50 backdrop-blur-sm rounded-xl border border-primary/20 hover:shadow-lg hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
+                  className="group flex items-center gap-4 p-4 bg-base-200/50 backdrop-blur-sm rounded-xl border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
                     <div className="text-primary group-hover:scale-110 transition-transform duration-300">
@@ -206,16 +214,6 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-base-200/50 backdrop-blur-sm p-8 rounded-xl border border-primary/20 shadow-lg">
             <h3 className="text-2xl font-bold text-primary mb-6 space-grotesk-font">Send Message</h3>
-            
-            {/* Setup Instructions */}
-            {/* <div className="mb-6 p-4 bg-blue-100 border border-blue-400 text-blue-700 rounded-lg">
-              <p className="font-medium mb-2">📧 EmailJS Setup Required:</p>
-              <ol className="text-sm space-y-1">
-                <li>1. Go to <a href="https://www.emailjs.com" target="_blank" rel="noopener noreferrer" className="underline">EmailJS.com</a> and sign up</li>
-                <li>2. Add Gmail service and create email template</li>
-                <li>3. Replace 'YOUR_PUBLIC_KEY', 'YOUR_SERVICE_ID', and 'YOUR_TEMPLATE_ID' in the code</li>
-              </ol>
-            </div> */}
             
             {/* Status Messages */}
             {submitStatus === 'success' && (
