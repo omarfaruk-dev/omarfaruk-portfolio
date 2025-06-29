@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../Logo";
-import ThemeToggle from "../ThemeToggle";
 
 const NavBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const menuItems = [
     { name: "About", to: "about" },
     { name: "Skill", to: "skills" },
@@ -20,8 +20,20 @@ const NavBar = () => {
     });
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className=" fixed bg-base-200 py-3 top-0 left-0 z-99 w-full text-secondary shadow-md">
+    <div className={`fixed py-3 top-0 left-0 z-99 w-full text-secondary shadow-md transition-all duration-300 ${
+      isScrolled ? 'bg-base-200' : 'bg-base-100'
+    }`}>
       <div className="navbar px-4 max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="navbar-start flex items-center">
@@ -55,19 +67,17 @@ const NavBar = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 rounded border border-primary text-primary hover:bg-primary hover:text-[#0F172A] transition-all font-semibold text-lg ml-4"
+            className="btn btn-primary text-base-100 hover:bg-primary hover:shadow-md hover:shadow-primary/20 transition-all font-semibold transform hover:-translate-y-1 text-lg ml-4"
           >
             RESUME
           </a>
-          <ThemeToggle/>
         </div>
 
         {/* Hamburger Icon */}
         <div className="lg:hidden ml-auto z-99 flex items-center justify-center">
-          <ThemeToggle/>
           <button
             onClick={() => setSidebarOpen(true)}
-            className="btn btn-ghost text-2xl text-primary"
+            className="btn btn-ghost text-2xl text-primary hover:shadow-md hover:shadow-primary/20 transition-all"
           >
             <FaBars/>
           </button>
@@ -91,7 +101,7 @@ const NavBar = () => {
             </div>
             <button
               onClick={() => setSidebarOpen(false)}
-              className="text-2xl text-primary"
+              className="text-2xl text-primary hover:shadow-md hover:shadow-primary/20 transition-all transform hover:-translate-y-1"
             >
               <FaTimes />
             </button>
@@ -117,7 +127,7 @@ const NavBar = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 rounded border border-primary text-primary hover:bg-primary hover:text-[#0F172A] transition-all font-semibold text-center mt-4"
+                className="block px-4 py-2 rounded border border-primary text-primary hover:bg-primary hover:text-[#0F172A] hover:shadow-lg hover:shadow-primary transition-all font-semibold text-center mt-4"
                 onClick={() => setSidebarOpen(false)}
               >
                 RESUME

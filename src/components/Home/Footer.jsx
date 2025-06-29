@@ -46,12 +46,12 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="flex items-center gap-4">
-            <span className="text-sm font-semibold text-secondary">Go Top</span>
+            <span className="text-sm font-semibold text-secondary">Go to Top</span>
             <Link
               to="about"
               smooth={true}
               duration={500}
-              className="group flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg border border-primary/20 text-primary hover:bg-primary/20 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+              className="group flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg border border-primary/20 text-primary hover:bg-primary/20 hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
               aria-label="Back to top"
             >
               <FaArrowUp className="group-hover:scale-110 transition-transform duration-300 text-sm" />

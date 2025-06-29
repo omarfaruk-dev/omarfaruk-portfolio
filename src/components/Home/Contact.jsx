@@ -192,7 +192,7 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group flex items-center justify-center w-12 h-12 bg-base-200/50 backdrop-blur-sm rounded-lg border border-primary/20 text-secondary/80 hover:shadow-lg hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1 ${social.color}`}
+                    className={`group flex items-center justify-center w-12 h-12 bg-base-200/50 backdrop-blur-sm rounded-lg border border-primary/20 text-secondary/80 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1 ${social.color}`}
                   >
                     <div className="group-hover:scale-110 transition-transform duration-300">
                       {social.icon}
@@ -300,7 +300,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 py-3 bg-primary text-base-100 font-semibold rounded-lg hover:bg-primary/90 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full px-6 py-3 bg-primary text-base-100 font-semibold rounded-lg hover:bg-primary/90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 shadow-md transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>

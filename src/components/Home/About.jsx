@@ -46,13 +46,13 @@ const About = () => {
                             href="/resume.pdf" 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="px-6 py-2 rounded bg-primary text-base-100 font-semibold hover:bg-primary/90 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                            className="px-6 py-2 rounded bg-primary text-base-100 font-semibold hover:bg-primary/90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 shadow-md transform hover:-translate-y-1"
                         >
                             Get Resume
                         </a>
                         <a 
                             href="#skills" 
-                            className="px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-base-100 transition-all duration-200 border-primary/60 hover:border-primary shadow-sm hover:shadow-md transform hover:-translate-y-1"
+                            className="btn btn-outline text-primary font-semibold hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary shadow-sm transform hover:-translate-y-1"
                         >
                             My Skills
                         </a>

@@ -97,9 +97,10 @@ const Skill = () => {
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-2 rounded border border-primary font-semibold text-lg transition-all duration-200 focus:outline-none ${activeTab === tab
-                ? 'bg-primary text-base-100'
-                : 'text-primary hover:bg-primary/10'
+              className={`px-6 py-2 rounded border border-primary font-semibold text-lg transition-all duration-200 focus:outline-none hover:shadow-md hover:shadow-primary/20 transform hover:-translate-y-1 ${
+                activeTab === tab
+                  ? 'bg-primary text-base-100'
+                  : 'text-primary hover:bg-primary/10'
                 }`}
               onClick={() => setActiveTab(tab)}
             >

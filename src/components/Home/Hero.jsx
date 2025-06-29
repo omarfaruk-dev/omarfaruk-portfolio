@@ -26,23 +26,23 @@ const Hero = () => {
                 </p>
                 {/* Social Icons */}
                 <div className="flex gap-4 mt-2 mb-6">
-                    <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-2xl text-secondary hover:text-primary transition">
+                    <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-2xl text-secondary hover:text-primary hover:shadow hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
                         <FaGithub />
                     </a>
-                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-2xl text-secondary hover:text-primary transition">
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
                         <FaLinkedin />
                     </a>
-                    <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-2xl text-secondary hover:text-primary transition">
+                    <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
                         <FaTwitter />
                     </a>
-                    <a href="https://codepen.io/your-codepen" target="_blank" rel="noopener noreferrer" aria-label="CodePen" className="text-2xl text-secondary hover:text-primary transition">
+                    <a href="https://codepen.io/your-codepen" target="_blank" rel="noopener noreferrer" aria-label="CodePen" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
                         <FaCodepen />
                     </a>
                 </div>
                 {/* Action Buttons */}
                 <div className="flex gap-4">
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-4 md:px-6 py-2 rounded bg-primary text-base-100 font-semibold hover:bg-opacity-90 transition">Get Resume</a>
-                    <a href="#about" className="px-4 md:px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-base-100 transition">About Me</a>
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-4 md:px-6 py-2 rounded bg-primary text-base-100 font-semibold hover:bg-opacity-90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 transform hover:-translate-y-1">Get Resume</a>
+                    <a href="#about" className="px-4 md:px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 transform hover:-translate-y-1">About Me</a>
                 </div>
             </div>
             {/* Right Side Image */}
