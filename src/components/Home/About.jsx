@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 const About = () => {
     return (
-        <section id="about" className="flex flex-col items-center py-8 md:pt-12 lg:py-16">
+        <section id="about" className="flex flex-col items-center py-8 md:pb-12 lg:pb-16">
             {/* Section Title */}
             <div className='w-full md:w-1/2 mx-auto'>
                 <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
