@@ -65,7 +65,7 @@ const NavBar = () => {
               ))}
             </ul>
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1GmlbdQqjw4ZnXPFL5udhtICmy5aSbZ-g/view"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary text-base-100 hover:bg-primary hover:shadow-md hover:shadow-primary/20 transition-all font-semibold transform hover:-translate-y-1 text-lg ml-4"
@@ -125,7 +125,7 @@ const NavBar = () => {
               ))}
               <li>
                 <a
-                  href="#"
+                  href="https://drive.google.com/file/d/1GmlbdQqjw4ZnXPFL5udhtICmy5aSbZ-g/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block px-4 py-2 rounded-md border border-primary text-primary hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all font-semibold text-center mt-4"

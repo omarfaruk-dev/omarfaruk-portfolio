@@ -42,7 +42,7 @@ const Hero = () => {
                 </div>
                 {/* Action Buttons */}
                 <div className="flex gap-4">
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="px-4 md:px-6 py-2 rounded-md bg-primary text-base-100 font-semibold hover:bg-opacity-90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 transform hover:-translate-y-1">Get Resume</a>
+                    <a href="https://drive.google.com/file/d/1GmlbdQqjw4ZnXPFL5udhtICmy5aSbZ-g/view" target="_blank" rel="noopener noreferrer" className="px-4 md:px-6 py-2 rounded-md bg-primary text-base-100 font-semibold hover:bg-opacity-90 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 transform hover:-translate-y-1">Get Resume</a>
                     <Link to="contact" smooth={true} duration={1500} className="px-4 md:px-6 py-2 rounded-md border border-primary text-primary font-semibold hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 transform hover:-translate-y-1 cursor-pointer">Contact Me</Link>
                 </div>
             </div>
