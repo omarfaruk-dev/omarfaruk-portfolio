@@ -24,7 +24,7 @@ const About = () => {
                         {/* Image */}
                         <img
                             src="/omar-photo.png"
-                            alt="Omar Faruk"
+                            alt="Omar Faruk Web Developer"
                             className="absolute left-1/2 bottom-0 -translate-x-1/2 w-96 h-90 object-cover z-20 rounded-lg shadow-md"
                         />
                     </div>
@@ -33,7 +33,7 @@ const About = () => {
                 {/* Right Side Content */}
                 <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-4 md:px-0 group" data-aos="fade-left" data-aos-delay="400">
                     <p className="text-lg md:text-xl text-secondary mb-4 space-grotesk-font group-hover:text-secondary/90 transition-colors duration-300" data-aos="fade-up" data-aos-delay="500">
-                        I'm Omar Faruk, a <span className="text-primary font-semibold group-hover:text-primary/80 transition-colors duration-300">MERN Stack Developer</span> focused on building beautiful, performant, and accessible web experiences. I love working with modern JavaScript frameworks and responsive design.
+                        I'm Omar Faruk, a <span className="text-primary font-semibold group-hover:text-primary/80 transition-colors duration-300">Frontend Developer</span> focused on building beautiful, performant, and accessible web experiences. I love working with modern JavaScript frameworks and responsive design.
                     </p>
                     <p className="text-base md:text-lg text-secondary mb-6 space-grotesk-font group-hover:text-secondary/90 transition-colors duration-300" data-aos="fade-up" data-aos-delay="600">
                         I enjoy learning new technologies, collaborating with teams, and turning creative ideas into reality. Outside of coding, I like exploring new places and sharing knowledge with the community.
