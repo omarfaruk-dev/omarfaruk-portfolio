@@ -172,13 +172,11 @@ const Contact = () => {
             </div>
 
             {/* Contact Info Cards */}
-            <div className="space-y-4">
+            <div className="space-y-4" data-aos="fade-up" data-aos-delay="600">
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
                   className="group flex items-center gap-4 p-4 bg-base-200/50 backdrop-blur-sm rounded-xl border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
-                  data-aos="fade-up"
-                  data-aos-delay={600 + (index * 100)}
                 >
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
                     <div className="text-primary group-hover:scale-110 transition-transform duration-300">
@@ -203,7 +201,7 @@ const Contact = () => {
             {/* Social Links */}
             <div data-aos="fade-up" data-aos-delay="1000">
               <h4 className="text-lg font-semibold text-secondary mb-4">Follow Me</h4>
-              <div className="flex gap-4">
+              <div className="flex gap-4" data-aos="zoom-in" data-aos-delay="1100">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
@@ -211,8 +209,6 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`group flex items-center justify-center w-12 h-12 bg-base-200/50 backdrop-blur-sm rounded-md border border-primary/20 text-secondary/80 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1 ${social.color}`}
-                    data-aos="zoom-in"
-                    data-aos-delay={1100 + (index * 100)}
                   >
                     <div className="group-hover:scale-110 transition-transform duration-300">
                       {social.icon}
