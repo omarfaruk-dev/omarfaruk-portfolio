@@ -23,7 +23,7 @@ const Projects = () => {
               <img
                 src={project.thumb_img}
                 alt={project.title}
-                className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -60,7 +60,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="btn btn-sm btn-outline btn-primary hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary min-w-[90px]"
                 >
-                  <FaGithub /> Client
+                  <FaGithub /> Repo
                 </a>
                 <button
                   className="btn btn-sm btn-outline btn-primary hover:bg-primary/80 hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all duration-200 border-primary/60 hover:border-primary min-w-[90px]"
@@ -105,7 +105,7 @@ const Projects = () => {
       <img
         src={selectedProject.thumb_img}
         alt={selectedProject.title}
-        className="w-full h-110 object-cover rounded-md mb-4 border border-base-300"
+        className="md:w-full md:h-110 object-cover rounded-md mb-4 border border-base-300"
       />
 
       {/* About */}
@@ -142,9 +142,17 @@ const Projects = () => {
           href={selectedProject.client}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-sm btn-outline btn-primary hover:shadow-md hover:shadow-primary/20 transition-all"
+          className="btn btn-sm btn-outline btn-primary hover:shadow-md hover:text-base-100 hover:shadow-primary/20 transition-all"
         >
           <FaGithub /> Client
+        </a>
+        <a
+          href={selectedProject.server}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-sm btn-outline btn-primary hover:shadow-md hover:text-base-100 hover:shadow-primary/20 transition-all"
+        >
+          <FaGithub /> Server
         </a>
       </div>
 
