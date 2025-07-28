@@ -1,12 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { BiLogoTypescript } from 'react-icons/bi';
 import { FaJs, FaReact, FaNodeJs, FaFigma, FaCode, FaGithub } from 'react-icons/fa';
-import ProgressBar from '@ramonak/react-progress-bar';
+import { RiNextjsFill } from 'react-icons/ri';
 import { SiAdobeillustrator, SiAdobephotoshop, SiExpress, SiFirebase, SiMongodb, SiRedux, SiTailwindcss, SiNetlify, SiVercel } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 
 const iconMap = {
   JavaScript: <FaJs className="text-yellow-400 text-5xl" />,
   React: <FaReact className="text-cyan-400 text-5xl animate-spin-slow" />,
+  NextJS: <RiNextjsFill  className="text-black dark:text-white text-5xl" />,
+  TypeScript: <BiLogoTypescript  className="text-blue-400 text-5xl" />,
   TailwindCSS: <SiTailwindcss className="text-sky-400 text-5xl" />,
   MongoDB: <SiMongodb className="text-green-500 text-5xl" />,
   NodeJS: <FaNodeJs className="text-green-600 text-5xl" />,
@@ -24,23 +27,25 @@ const iconMap = {
 
 const skillData = {
   Web: [
-    { name: "TailwindCSS", value: 90 },
-    { name: "React", value: 85 },
-    { name: "JavaScript", value: 80 },
+    { name: "TailwindCSS", value: 85 },
+    { name: "React", value: 70 },
+    { name: "JavaScript", value: 70 },
     { name: "NodeJS", value: 75 },
     { name: "ExpressJS", value: 70 },
     { name: "MongoDB", value: 70 },
-    { name: "Firebase", value: 65 },
+    { name: "Firebase", value: 75 },
+    { name: "NextJS", value: 60 },
+    { name: "TypeScript", value: 50 },
   ],
   Others: [
     { name: "Figma", value: 80 },
-    { name: "Photoshop", value: 75 },
+    { name: "Photoshop", value: 95 },
     { name: "Illustrator", value: 70 },
   ],
   Tools: [
-    { name: "GitHub", value: 90 },
+    { name: "GitHub", value: 70 },
     { name: "VSCode", value: 95 },
-    { name: "Cursor", value: 70 },
+    { name: "Cursor", value: 80 },
     { name: "Netlify", value: 70 },
     { name: "Vercel", value: 70 },
   ],
@@ -50,41 +55,6 @@ const tabs = ['Web', 'Tools', 'Others'];
 
 const Skill = () => {
   const [activeTab, setActiveTab] = useState('Web');
-  const [progress, setProgress] = useState([]);
-  const [displayedValue, setDisplayedValue] = useState([]);
-
-  useEffect(() => {
-    // Animate all progress bars from 0 to their value
-    setProgress(Array(skillData[activeTab].length).fill(0));
-    setDisplayedValue(Array(skillData[activeTab].length).fill(0));
-    const timeouts = skillData[activeTab].map((skill, idx) =>
-      setTimeout(() => {
-        setProgress((prev) => {
-          const updated = [...prev];
-          updated[idx] = skill.value;
-          return updated;
-        });
-      }, 200 + idx * 200)
-    );
-    return () => timeouts.forEach(clearTimeout);
-  }, [activeTab]);
-
-  useEffect(() => {
-    // Animate the displayed value for each skill
-    const intervals = skillData[activeTab].map((skill, idx) => {
-      if (progress[idx] === 0) return null;
-      return setInterval(() => {
-        setDisplayedValue((prev) => {
-          const updated = [...prev];
-          if (updated[idx] < skill.value) {
-            updated[idx] = Math.min(updated[idx] + 1, skill.value);
-          }
-          return updated;
-        });
-      }, 15);
-    });
-    return () => intervals.forEach((interval) => interval && clearInterval(interval));
-  }, [progress, activeTab]);
 
   return (
     <section id="skills" className="flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 bg-base-100">
@@ -111,37 +81,61 @@ const Skill = () => {
           ))}
         </div>
         {/* Skill Grid */}
-        <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {skillData[activeTab].map((skill, index) => (
             <div
               key={index}
-              className="bg-base-200/50 backdrop-blur-sm p-6 rounded-md shadow-lg border border-primary/20 flex items-center hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-2 group"
+              className="relative bg-base-200/50 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-500 transform hover:-translate-y-3 group overflow-hidden"
             >
-              <div className="flex flex-col items-center justify-center mr-4">
-                <div className="transition-transform duration-300 group-hover:scale-110">
-                  {iconMap[skill.name] || <FaCode className="text-primary text-5xl" />}
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10 flex items-center">
+                <div className="flex flex-col items-center justify-center mr-6">
+                  <div className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12">
+                    {iconMap[skill.name] || <FaCode className="text-primary text-5xl" />}
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold text-secondary text-xl space-grotesk-font group-hover:text-primary transition-colors duration-300">
+                      {skill.name}
+                    </span>
+                    {/* Skill level badge */}
+                    <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1">
+                        {skill.value >= 90 ? (
+                          <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full">
+                            <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+                            <span className="text-xs font-medium text-yellow-600 dark:text-yellow-400">Expert</span>
+                          </div>
+                        ) : skill.value >= 80 ? (
+                          <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
+                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span className="text-xs font-medium text-green-600 dark:text-green-400">Advanced</span>
+                          </div>
+                        ) : skill.value >= 70 ? (
+                          <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span className="text-xs font-medium text-blue-600 dark:text-blue-400">Intermediate</span>
+                          </div>
+                        ) : (
+                          <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-gray-500/20 to-slate-500/20 border border-gray-500/30 rounded-full">
+                            <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                            <span className="text-xs font-medium text-gray-600 dark:text-gray-400">Learning</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="font-semibold text-secondary text-lg space-grotesk-font group-hover:text-secondary/90 transition-colors duration-300">{skill.name}</span>
-                </div>
-                <ProgressBar
-                  completed={progress[index] || 0}
-                  maxCompleted={100}
-                  height="10px"
-                  isLabelVisible={false}
-                  baseBgColor="#e5e7eb"
-                  bgColor="#47d1d1"
-                  animateOnRender
-                  transitionDuration="1.2s"
-                  className="rounded-full"
-                  customLabel={null}
-                />
-              </div>
-              <div className="ml-4 text-primary font-bold text-xl min-w-[48px] text-right group-hover:text-primary/80 transition-colors duration-300">
-                {displayedValue[index] || 0}%
-              </div>
+              
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           ))}
         </div>
