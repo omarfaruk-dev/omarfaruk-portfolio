@@ -59,13 +59,13 @@ const Skill = () => {
   return (
     <section id="skills" className="flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 bg-base-100">
       <div className="max-w-5xl w-full mx-auto px-4">
-        <div className='w-full md:w-7/11 mx-auto mb-16'>
+        <div className='w-full md:w-7/11 mx-auto mb-16' data-aos="fade-up" data-aos-delay="200">
           <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
           <h2>My Skills</h2>
         </div>
         </div>
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-4 mb-10" data-aos="fade-up" data-aos-delay="300">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -81,7 +81,7 @@ const Skill = () => {
           ))}
         </div>
         {/* Skill Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8" data-aos="fade-up" data-aos-delay="400">
           {skillData[activeTab].map((skill, index) => (
             <div
               key={index}

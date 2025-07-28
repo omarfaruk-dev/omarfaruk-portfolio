@@ -33,11 +33,11 @@ const NavBar = () => {
   return (
     <div className={`fixed py-3 top-0 left-0 z-99 w-full text-secondary shadow-md transition-all duration-300 ${
       isScrolled ? 'bg-base-200 border-b border-primary/10' : 'bg-base-100 border-b border-primary/20'
-    }`}>
+    }`} data-aos="fade-down" data-aos-delay="100">
       <div className="max-w-7xl mx-auto px-4">
         <div className="navbar flex items-center justify-between">
           {/* Logo */}
-          <div className="navbar-start flex items-center">
+          <div className="navbar-start flex items-center" data-aos="fade-right" data-aos-delay="200">
             <div
               onClick={scrollToTop}
               className="cursor-pointer transition-all duration-200"
@@ -47,10 +47,10 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Menu + Resume Button (Right Aligned) */}
-          <div className="hidden md:flex flex-1 justify-end items-center gap-8">
+          <div className="hidden md:flex flex-1 justify-end items-center gap-8" data-aos="fade-left" data-aos-delay="300">
             <ul className="flex gap-10 items-center">
-              {menuItems.map((item) => (
-                <li key={item.to}>
+              {menuItems.map((item, index) => (
+                <li key={item.to} data-aos="fade-down" data-aos-delay={400 + (index * 50)}>
                   <Link
                     to={item.to}
                     smooth={true}
@@ -69,13 +69,15 @@ const NavBar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary text-base-100 hover:bg-primary hover:shadow-md hover:shadow-primary/20 transition-all font-semibold transform hover:-translate-y-1 text-lg ml-4"
+              data-aos="fade-down"
+              data-aos-delay="600"
             >
               RESUME
             </a>
           </div>
 
           {/* Hamburger Icon */}
-          <div className="md:hidden ml-auto z-99 flex items-center justify-center">
+          <div className="md:hidden ml-auto z-99 flex items-center justify-center" data-aos="fade-left" data-aos-delay="200">
             <button
               onClick={() => setSidebarOpen(true)}
               className="text-2xl text-primary hover:shadow-md hover:shadow-primary/20 transition-all"

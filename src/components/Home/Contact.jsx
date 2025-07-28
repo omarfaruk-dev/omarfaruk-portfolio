@@ -63,7 +63,7 @@ const Contact = () => {
     
       
       // Send email using EmailJS
-      const result = await window.emailjs.send(
+      await window.emailjs.send(
         'service_w2cf1qp', // Replace with your EmailJS service ID
         'template_tkut5pr', // Replace with your EmailJS template ID
         {
@@ -154,7 +154,7 @@ const Contact = () => {
     <section id="contact" className="flex flex-col items-center py-8 md:py-12 lg:py-16">
       <div className="max-w-6xl w-full mx-auto px-4">
         {/* Section Title */}
-        <div className='w-full md:w-1/2 mx-auto mb-16'>
+        <div className='w-full md:w-1/2 mx-auto mb-16' data-aos="fade-up" data-aos-delay="200">
           <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
             <h2>Get In Touch</h2>
           </div>
@@ -162,10 +162,10 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-right" data-aos-delay="300">
             <div>
-              <h3 className="text-2xl font-bold text-primary mb-6 space-grotesk-font">Let's Connect</h3>
-              <p className="text-secondary/80 text-lg leading-relaxed">
+              <h3 className="text-2xl font-bold text-primary mb-6 space-grotesk-font" data-aos="fade-up" data-aos-delay="400">Let's Connect</h3>
+              <p className="text-secondary/80 text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="500">
                 I'm always interested in new opportunities and exciting projects. 
                 Whether you have a question or just want to say hi, feel free to reach out!
               </p>
@@ -177,6 +177,8 @@ const Contact = () => {
                 <div
                   key={index}
                   className="group flex items-center gap-4 p-4 bg-base-200/50 backdrop-blur-sm rounded-xl border border-primary/20 hover:shadow-md hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
+                  data-aos="fade-up"
+                  data-aos-delay={600 + (index * 100)}
                 >
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
                     <div className="text-primary group-hover:scale-110 transition-transform duration-300">
@@ -199,7 +201,7 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div>
+            <div data-aos="fade-up" data-aos-delay="1000">
               <h4 className="text-lg font-semibold text-secondary mb-4">Follow Me</h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
@@ -209,6 +211,8 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`group flex items-center justify-center w-12 h-12 bg-base-200/50 backdrop-blur-sm rounded-md border border-primary/20 text-secondary/80 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1 ${social.color}`}
+                    data-aos="zoom-in"
+                    data-aos-delay={1100 + (index * 100)}
                   >
                     <div className="group-hover:scale-110 transition-transform duration-300">
                       {social.icon}
@@ -220,8 +224,8 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-base-200/50 backdrop-blur-sm p-8 rounded-md border border-primary/20 shadow-lg">
-            <h3 className="text-2xl font-bold text-primary mb-6 space-grotesk-font ">Send Message</h3>
+          <div className="bg-base-200/50 backdrop-blur-sm p-8 rounded-md border border-primary/20 shadow-lg" data-aos="fade-left" data-aos-delay="400">
+            <h3 className="text-2xl font-bold text-primary mb-6 space-grotesk-font " data-aos="fade-up" data-aos-delay="500">Send Message</h3>
             
             {/* Status Messages */}
             {submitStatus === 'success' && (

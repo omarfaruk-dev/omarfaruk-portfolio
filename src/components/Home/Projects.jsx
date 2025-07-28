@@ -7,13 +7,13 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-8 md:py-12 lg:py-16">
-      <div className="w-full md:w-1/2 mx-auto mb-16">
+      <div className="w-full md:w-1/2 mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">
         <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
         <h2>My Projects</h2>
       </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 my-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 my-10" data-aos="fade-up" data-aos-delay="300">
         {projectsData.map((project, index) => (
           <div
             key={index}
@@ -75,7 +75,7 @@ const Projects = () => {
       </div>
 
       {/* See More Button */}
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-12" data-aos="fade-up" data-aos-delay="600">
         <a
           href="https://github.com/omarfaruk-dev"
           target="_blank"
