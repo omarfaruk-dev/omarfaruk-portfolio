@@ -51,3 +51,14 @@
   }
 }
 
+/* Text selection styling */
+::selection {
+  background-color: #47d1d1;
+  color: #0F172A;
+}
+
+::-moz-selection {
+  background-color: #47d1d1;
+  color: #0F172A;
+}
+

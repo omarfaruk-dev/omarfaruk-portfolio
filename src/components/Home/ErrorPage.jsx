@@ -96,7 +96,7 @@ const ErrorPage = () => {
                             <div className="text-secondary/70">Hours of Coding</div>
                         </div>
                         <div className="bg-base-200/50 backdrop-blur-sm p-6 rounded-xl border border-primary/20 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
-                            <div className="text-3xl font-bold text-primary mb-2">50+</div>
+                            <div className="text-3xl font-bold text-primary mb-2">15+</div>
                             <div className="text-secondary/70">Projects Completed</div>
                         </div>
                         <div className="bg-base-200/50 backdrop-blur-sm p-6 rounded-xl border border-primary/20 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
