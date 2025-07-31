@@ -1,5 +1,17 @@
 [
   {
+    "title": "PETIFY",
+    "about": "A modern pet adoption and donation platform enabling seamless pet adoption, donation campaigns, secure Stripe payments, and animal welfare with a modern UI, secure authentication, and real-time features for users and admins.",
+    "technology": ["React", "Firebase", "MongoDB", "Express", "Stripe", "Tailwind CSS"],
+    "thumb_img": "https://i.postimg.cc/9MVNRdgF/petify.jpg",
+    "live": "https://petify-us.web.app",
+    "client": "https://github.com/omarfaruk-dev/petify-client.git",
+    "server": "https://github.com/omarfaruk-dev/petify-server.git",
+    "description": "Petify is a full-stack web app built with the MERN stack (MongoDB, Express.js, React, Node.js), Vite, Tailwind CSS, and Firebase—enabling seamless pet adoption, donation campaigns, secure Stripe payments, and animal welfare with a modern UI, secure authentication, and real-time features for users and admins.",
+    "challenges": "Integrating Stripe payment gateway for secure donation processing and handling complex payment flows with proper error handling and webhook management. Implementing comprehensive role-based authentication and authorization system for users and admins with different permission levels and secure access controls.",
+    "overcome": "I overcame the Stripe integration challenge by implementing proper webhook handling, error management, and using Stripe's test mode for development. For role-based authentication, I created a middleware system with JWT tokens and Firebase Admin SDK to manage different user roles and permissions effectively."
+  },
+  {
     "title": "ROOMLY",
     "about": "Roomly helps users find and manage roommates. Create profiles, browse listings, and filter matches by preferences, budget, and location.",
     "technology": ["React", "Firebase", "MongoDB", "Express"],

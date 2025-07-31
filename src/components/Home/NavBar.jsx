@@ -31,8 +31,8 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className={`fixed py-3 top-0 left-0 z-99 w-full text-secondary shadow-md transition-all duration-300 ${
-      isScrolled ? 'bg-base-200 border-b border-primary/10' : 'bg-base-100 border-b border-primary/20'
+    <div className={`fixed py-3 top-0 left-0 z-99 w-full text-secondary transition-all duration-300 ${
+      isScrolled ? 'bg-base-200 shadow-md' : 'bg-base-100'
     }`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="navbar flex items-center justify-between">

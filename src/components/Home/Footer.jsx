@@ -37,7 +37,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-base-200/50 py-6 text-secondary border-t border-primary/20">
+    <footer className="bg-base-200 py-6 text-secondary border-t border-primary/20">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center md:items-center justify-between gap-y-4 md:gap-y-0">
         {/* Thanks Buttons */}
         <div className="flex gap-2 mb-2 md:mb-0">
