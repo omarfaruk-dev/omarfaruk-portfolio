@@ -109,7 +109,7 @@ const Projects = () => {
       />
 
       {/* About */}
-      <p className="mb-4 text-sm text-secondary/80">{selectedProject.about}</p>
+      <p className="mb-4 text-sm text-secondary/60">{selectedProject.about}</p>
 
       {/* Description */}
       <p className="mb-4 text-secondary/80">
@@ -120,6 +120,11 @@ const Projects = () => {
       <p className="mb-4 text-secondary/80">
         <span className="font-semibold text-primary">Challenges:</span>{" "}
         {selectedProject.challenges}
+      </p>
+      {/* Challenges overcome */}
+      <p className="mb-4 text-secondary/80">
+        <span className="font-semibold text-primary">Solutions Implemented:</span>{" "}
+        {selectedProject.overcome}
       </p>
 
       {/* Technologies */}
