@@ -26,7 +26,7 @@
     "about": "Quick Pay lets users pay bills instantly. Manage payments, view history, and enjoy a secure, user-friendly experience for all your transactions.",
     "technology": ["React", "Firebase", "tailwindcss"],
     "thumb_img": "https://i.ibb.co.com/7tVdwh6x/quick-pay-mockup.jpg",
-    "live": "https://quick-pay-app.netlify.app",
+    "live": "https://quick-pay-bd.netlify.app",
     "client": "https://github.com/omarfaruk-dev/quick-pay.git",
     "server": "https://github.com/omarfaruk-dev/quick-pay.git",
     "description": "Quick Pay is a modern, secure, and user-friendly payment application designed to simplify online transactions. It allows users to send and receive money instantly, manage their transaction history, and connect multiple payment methods. The app features a clean interface, real-time notifications, and robust security measures to ensure safe and seamless payments for both individuals and businesses.",
