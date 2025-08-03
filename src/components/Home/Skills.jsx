@@ -6,23 +6,23 @@ import { SiAdobeillustrator, SiAdobephotoshop, SiExpress, SiFirebase, SiMongodb,
 import { VscVscode } from 'react-icons/vsc';
 
 const iconMap = {
-  JavaScript: <FaJs className="text-yellow-400 text-5xl" />,
-  React: <FaReact className="text-cyan-400 text-5xl animate-spin-slow" />,
-  NextJS: <RiNextjsFill  className="text-black dark:text-white text-5xl" />,
-  TypeScript: <BiLogoTypescript  className="text-blue-400 text-5xl" />,
-  TailwindCSS: <SiTailwindcss className="text-sky-400 text-5xl" />,
-  MongoDB: <SiMongodb className="text-green-500 text-5xl" />,
-  NodeJS: <FaNodeJs className="text-green-600 text-5xl" />,
-  ExpressJS: <SiExpress className="text-gray-300 text-5xl" />,
-  Firebase: <SiFirebase className="text-red-600 text-5xl" />,
-  Redux: <SiRedux className="text-purple-500 text-5xl" />,
-  Figma: <FaFigma className="text-pink-500 text-5xl" />,
-  Photoshop: <SiAdobephotoshop className="text-blue-500 text-5xl" />,
-  Illustrator: <SiAdobeillustrator className="text-orange-600 text-5xl" />,
-  VSCode: <VscVscode className="text-blue-400 text-5xl" />,
-  GitHub: <FaGithub className="text-white text-5xl" />,
-  Netlify: <SiNetlify className="text-green-400 text-5xl" />,
-  Vercel: <SiVercel className="text-black dark:text-white text-5xl" />,
+  JavaScript: <FaJs className="text-yellow-400 text-3xl md:text-5xl" />,
+  React: <FaReact className="text-cyan-400 text-3xl md:text-5xl animate-spin-slow" />,
+  NextJS: <RiNextjsFill  className="text-black dark:text-white text-3xl md:text-5xl" />,
+  TypeScript: <BiLogoTypescript  className="text-blue-400 text-3xl md:text-5xl" />,
+  TailwindCSS: <SiTailwindcss className="text-sky-400 text-3xl md:text-5xl" />,
+  MongoDB: <SiMongodb className="text-green-500 text-3xl md:text-5xl" />,
+  NodeJS: <FaNodeJs className="text-green-600 text-3xl md:text-5xl" />,
+  ExpressJS: <SiExpress className="text-gray-300 text-3xl md:text-5xl" />,
+  Firebase: <SiFirebase className="text-red-600 text-3xl md:text-5xl" />,
+  Redux: <SiRedux className="text-purple-500 text-3xl md:text-5xl" />,
+  Figma: <FaFigma className="text-pink-500 text-3xl md:text-5xl" />,
+  Photoshop: <SiAdobephotoshop className="text-blue-500 text-3xl md:text-5xl" />,
+  Illustrator: <SiAdobeillustrator className="text-orange-600 text-3xl md:text-5xl" />,
+  VSCode: <VscVscode className="text-blue-400 text-3xl md:text-5xl" />,
+  GitHub: <FaGithub className="text-white text-3xl md:text-5xl" />,
+  Netlify: <SiNetlify className="text-green-400 text-3xl md:text-5xl" />,
+  Vercel: <SiVercel className="text-black dark:text-white text-3xl md:text-5xl" />,
 };
 
 const skillData = {
@@ -96,16 +96,16 @@ const Skill = () => {
               <div className="relative z-10 flex items-center">
                 <div className="flex flex-col items-center justify-center mr-6">
                   <div className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12">
-                    {iconMap[skill.name] || <FaCode className="text-primary text-5xl" />}
+                    {iconMap[skill.name] || <FaCode className="text-primary " />}
                   </div>
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-secondary text-xl space-grotesk-font group-hover:text-primary transition-colors duration-300">
+                    <span className="font-bold text-secondary md:text-xl space-grotesk-font group-hover:text-primary transition-colors duration-300">
                       {skill.name}
                     </span>
                     {/* Skill level badge */}
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 ml-2">
                       <div className="flex items-center gap-1">
                         {skill.value >= 90 ? (
                           <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full">
