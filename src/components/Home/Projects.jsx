@@ -1,6 +1,6 @@
 import { useState } from "react";
 import projectsData from "../../assets/projects.json";
-import { FaGlobe, FaGithub, FaCode } from "react-icons/fa";
+import { FaGlobe, FaGithub, FaCode, FaTimes } from "react-icons/fa";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -90,16 +90,24 @@ const Projects = () => {
 {selectedProject && (
   <dialog
     id="project_modal"
-    className="modal modal-open border border-primary/20 backdrop-blur-xs"
+    className=" modal modal-open border border-primary/20 backdrop-blur-xs"
     onClick={() => setSelectedProject(null)}
   >
     <div
       className="modal-box max-w-3xl border border-primary/20"
       onClick={(e) => e.stopPropagation()}
     >
-      <h3 className="font-bold text-2xl mb-4 text-primary">
-        {selectedProject.title}
-      </h3>
+             <div className="flex justify-between items-center mb-4">
+         <h3 className="font-bold text-2xl text-primary">
+           {selectedProject.title}
+         </h3>
+         <button
+           className="btn btn-circle btn-sm btn-outline btn-primary hover:bg-primary hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all"
+           onClick={() => setSelectedProject(null)}
+         >
+           <FaTimes />
+         </button>
+       </div>
 
       {/* Thumbnail Image */}
       <img
@@ -133,43 +141,43 @@ const Projects = () => {
         {selectedProject.technology.join(", ")}
       </div>
 
-      {/* Buttons */}
-      <div className="flex flex-wrap items-center justify-center gap-3 text-sm mb-4">
-        <a
-          href={selectedProject.live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-sm btn-primary text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all"
-        >
-          <FaGlobe className="mr-1" /> Live
-        </a>
-        <a
-          href={selectedProject.client}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-sm btn-outline btn-primary hover:shadow-md hover:text-base-100 hover:shadow-primary/20 transition-all"
-        >
-          <FaGithub /> Client
-        </a>
-        <a
-          href={selectedProject.server}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-sm btn-outline btn-primary hover:shadow-md hover:text-base-100 hover:shadow-primary/20 transition-all"
-        >
-          <FaGithub /> Server
-        </a>
-      </div>
+             {/* Buttons */}
+       <div className="flex flex-wrap items-center justify-center gap-3 text-sm mb-4">
+         <a
+           href={selectedProject.live}
+           target="_blank"
+           rel="noopener noreferrer"
+           className="btn btn-sm btn-primary text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all"
+         >
+           <FaGlobe className="mr-1" /> Live
+         </a>
+         <a
+           href={selectedProject.client}
+           target="_blank"
+           rel="noopener noreferrer"
+           className="btn btn-sm btn-outline btn-primary hover:shadow-md hover:text-base-100 hover:shadow-primary/20 transition-all"
+         >
+           <FaGithub /> Client
+         </a>
+         <a
+           href={selectedProject.server}
+           target="_blank"
+           rel="noopener noreferrer"
+           className="btn btn-sm btn-outline btn-primary hover:shadow-md hover:text-base-100 hover:shadow-primary/20 transition-all"
+         >
+           <FaGithub /> Server
+         </a>
+       </div>
 
-      {/* Close Button */}
-      <div className="modal-action">
-        <button
-          className="btn btn-primary btn-outline hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all"
-          onClick={() => setSelectedProject(null)}
-        >
-          Close
-        </button>
-      </div>
+       {/* Close Button */}
+       <div className="modal-action">
+         <button
+           className="btn btn-primary btn-outline hover:text-base-100 hover:shadow-md hover:shadow-primary/20 transition-all"
+           onClick={() => setSelectedProject(null)}
+         >
+           Close
+         </button>
+       </div>      
     </div>
   </dialog>
 )}

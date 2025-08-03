@@ -61,4 +61,7 @@
   background-color: #47d1d1;
   color: #0F172A;
 }
+a.active{
+  color: #47d1d1;
+}
 
