@@ -105,9 +105,10 @@ const Contact = () => {
     },
     {
       icon: <FaPhone className="text-2xl" />,
-      title: "Phone / Whatsapp",
+      title: "Phone",
       value: "+8801739460198",
-      isCopy: true
+      isCopy: false,
+      isTel: true
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
@@ -150,6 +151,8 @@ const Contact = () => {
     setTimeout(() => setCopiedIndex(null), 1200);
   };
 
+
+
   return (
     <section id="contact" className="flex flex-col items-center py-8 md:py-12 lg:py-16">
       <div className="max-w-6xl w-full mx-auto px-4">
@@ -188,10 +191,10 @@ const Contact = () => {
                       {info.title}
                     </h4>
                     <p
-                      className={`text-secondary/80 group-hover:text-secondary/70 transition-colors duration-300 ${info.isCopy ? 'cursor-pointer hover:text-primary font-semibold' : ''}`}
-                      onClick={info.isCopy ? () => handleCopy(info.value, index) : undefined}
+                      className={`text-secondary/80 group-hover:text-secondary/70 transition-colors duration-300 ${info.isCopy || info.isTel ? 'cursor-pointer hover:text-primary font-semibold' : ''}`}
+                      onClick={info.isTel ? () => window.open(`tel:${info.value}`, '_self') : info.isCopy ? () => handleCopy(info.value, index) : undefined}
                     >
-                      {info.value} {copiedIndex === index && info.isCopy && <span className="ml-2 text-primary text-xs">Copied to clipboard!</span>}
+                      {info.value} {copiedIndex === index && info.isCopy && <span className="ml-2 text-white text-xs">Copied to clipboard!</span>}
                     </p>
                   </div>
                 </div>
@@ -234,7 +237,7 @@ const Contact = () => {
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg flex items-center gap-3">
                 <FaTimesCircle className="text-red-500 text-2xl" />
-                <p className="font-medium">Failed to send message. Please complete EmailJS setup or contact me directly at omarfaruk.dev@gmail.com</p>
+                <p className="font-medium">Failed to send message. Please contact me directly at omarfaruk.dev@gmail.com</p>
               </div>
             )}
 
