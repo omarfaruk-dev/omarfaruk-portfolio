@@ -49,16 +49,16 @@ const Hero = () => {
             {/* Right Side code block */}
             <div className="flex-1 flex items-center justify-center" data-aos="fade-left" data-aos-delay="400">
                 {/* Branded Code Block Interface */}
-                <div className="w-full max-w-full md:w-[600px] bg-base-200 border-2 border-primary shadow-xl p-3 md:p-6 relative font-mono text-sm overflow-x-auto rounded-md" style={{
+                <div className="w-full max-w-full md:w-[600px] bg-base-200 border-2 border-primary shadow-xl relative font-mono text-sm overflow-x-auto rounded-md" style={{
                     boxShadow: '0 8px 32px 0 rgba(24, 106, 121, 0.25)',
                     position: 'relative',
                 }}>
-                    <div className="flex items-center gap-2 mb-4">
+                    <div className="flex items-center gap-2 mb-4 p-3 bg-primary/20 backdrop-blur-sm border border-primary/20">
                         <span className="w-3 h-3 rounded-full bg-[#ff5f56]"></span>
                         <span className="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
                         <span className="w-3 h-3 rounded-full bg-[#27c93f]"></span>
                     </div>
-                    <pre className="whitespace-pre-wrap break-words text-sm leading-relaxed select-text" style={{ background: 'transparent', color: '#d4d4d4', margin: 0, padding: 0 }}>
+                    <pre className="whitespace-pre-wrap break-words text-sm leading-relaxed select-text p-4" style={{ background: 'transparent', color: '#d4d4d4', margin: 0 }}>
                         <span style={{ color: '#ff79c6' }}>const</span> <span style={{ color: '#fabd2f' }}>developer</span> <span style={{ color: '#d4d4d4' }}>=</span> <span style={{ color: '#d4d4d4' }}>&#123;</span>{`
   `}<span style={{ color: '#fabd2f' }}>name</span><span style={{ color: '#d4d4d4' }}>: </span><span style={{ color: '#d4d4d4' }}>'Omar Faruk'</span><span style={{ color: '#d4d4d4' }}>,</span>{`
   `}<span style={{ color: '#fabd2f' }}>role</span><span style={{ color: '#d4d4d4' }}>: </span><span style={{ color: '#d4d4d4' }}>'Frontend Developer | MERN Stack | JavaScript Lover'</span><span style={{ color: '#d4d4d4' }}>,</span>{`
