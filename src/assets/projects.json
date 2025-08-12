@@ -9,7 +9,8 @@
     "server": "https://github.com/omarfaruk-dev/petify-server.git",
     "description": "Petify is a full-stack web app built with the MERN stack (MongoDB, Express.js, React, Node.js), Vite, Tailwind CSS, and Firebase—enabling seamless pet adoption, donation campaigns, secure Stripe payments, and animal welfare with a modern UI, secure authentication, and real-time features for users and admins.",
     "challenges": "Integrating Stripe payment gateway for secure donation processing and handling complex payment flows with proper error handling and webhook management. Implementing comprehensive role-based authentication and authorization system for users and admins with different permission levels and secure access controls.",
-    "overcome": "I overcame the Stripe integration challenge by implementing proper webhook handling, error management, and using Stripe's test mode for development. For role-based authentication, I created a middleware system with JWT tokens and Firebase Admin SDK to manage different user roles and permissions effectively."
+    "overcome": "I overcame the Stripe integration challenge by implementing proper webhook handling, error management, and using Stripe's test mode for development. For role-based authentication, I created a middleware system with JWT tokens and Firebase Admin SDK to manage different user roles and permissions effectively.",
+    "Potential improvements and future plans": "I plan to add a chat feature for users to communicate with each other, and a blog section for users to share their stories and experiences with pets."
   },
   {
     "title": "FOODIO",
@@ -21,7 +22,9 @@
     "server": "https://github.com/omarfaruk-dev/foodio-server",
     "description": "Foodio is a comprehensive food delivery platform featuring an eye-catching hero slider, infinite scroll gallery, customer reviews, detailed food cards, and secure user authentication. The app includes profile management, order tracking, vendor admin features for food management, and responsive navigation with dark/light theme toggle.",
     "challenges": "Managing food availability and stock tracking to ensure accurate order processing and prevent overselling of items. Implementing a comprehensive order management system that displays order history, status tracking.",
-    "overcome": "I overcame the stock management challenge by implementing real-time inventory tracking with MongoDB updates and preventing orders when items are out of stock. For the order management system, I created a comprehensive order page that displays order history and status updates between inventory and order processing."
+    "overcome": "I overcame the stock management challenge by implementing real-time inventory tracking with MongoDB updates and preventing orders when items are out of stock. For the order management system, I created a comprehensive order page that displays order history and status updates between inventory and order processing.",
+    "Potential improvements and future plans": "Add real-time chat, push notifications, and role based dashboard page for admins and users."
+  
   },
   {
     "title": "ROOMLY",
@@ -33,7 +36,8 @@
     "server": "https://github.com/omarfaruk-dev/roomly-server.git",
     "description": "Roomly is a comprehensive roommate finder and shared housing platform that connects users based on lifestyle preferences, budget, and location. The app allows users to create detailed profiles, search and filter listings, like listings to reveal contact details, and manage their own listings with secure authentication and responsive design.",
     "challenges": "Implementing secure user authentication and profile management with Firebase while ensuring data privacy and user verification. Creating an intuitive listing system with search, filter, and like functionality that efficiently handles large datasets and provides smooth user interactions.",
-    "overcome": "I overcame the authentication challenge by implementing Firebase Authentication with Google sign-in, proper session management using React Context, and secure user profile creation. For the listing system, I built efficient MongoDB aggregation pipelines for search and filtering, and implemented a like-based contact reveal mechanism that protects user privacy while enabling connections."
+    "overcome": "I overcame the authentication challenge by implementing Firebase Authentication with Google sign-in, proper session management using React Context, and secure user profile creation. For the listing system, I built efficient MongoDB aggregation pipelines for search and filtering, and implemented a like-based contact reveal mechanism that protects user privacy while enabling connections.",
+    "Potential improvements and future plans": "Push notifications and an admin feature allowing admins to promote any user to admin status for enhanced management."
   }
   
   
