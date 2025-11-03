@@ -26,7 +26,7 @@ const Projects = () => {
                 className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </figure>
             <div className="card-body p-6">
               <h3 className="text-xl font-bold text-primary space-grotesk-font group-hover:text-primary/80 transition-colors duration-300">

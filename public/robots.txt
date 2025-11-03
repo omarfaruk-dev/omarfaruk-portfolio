@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://omarfaruk-dev.web.app/sitemap.xml
