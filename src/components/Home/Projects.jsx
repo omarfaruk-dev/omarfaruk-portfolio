@@ -6,8 +6,8 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="py-8 md:py-12 lg:py-16">
-      <div className="w-full md:w-1/2 mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">
+    <section id="projects" className="py-8 md:py-12 lg:py-16 max-w-7xl mx-auto px-4">
+      <div className="w-full mb-16" data-aos="fade-up" data-aos-delay="200">
         <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
           <h2>My Projects</h2>
         </div>

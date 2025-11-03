@@ -155,7 +155,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="flex flex-col items-center py-8 md:py-12 lg:py-16">
-      <div className="max-w-6xl w-full mx-auto px-4">
+      <div className="max-w-7xl w-full mx-auto px-4">
         {/* Section Title */}
         <div className='w-full md:w-1/2 mx-auto mb-16' data-aos="fade-up" data-aos-delay="200">
           <div className="divider before:bg-primary after:bg-primary text-primary text-3xl font-bold space-grotesk-font">
@@ -230,7 +230,7 @@ const Contact = () => {
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center gap-3">
                 <FaCheckCircle className="text-green-500 text-2xl" />
-                <p className="font-medium">Message sent successfully! I'll get back to you soon.</p>
+                <p className="font-medium">Message sent successfully! I'll get back to you soon. Thank you!</p>
               </div>
             )}
             

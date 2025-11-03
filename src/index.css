@@ -65,3 +65,30 @@ a.active{
   color: #47d1d1;
 }
 
+
+/* For modern browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;              /* scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;     /* scrollbar track (background) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #47d1d1;  /* scrollbar color */
+  border-radius: 10px;        /* rounded corners */
+  border: 2px solid #0f0f0f;  /* optional border for contrast */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #14b8a6;   /* hover color */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;             /* thin scrollbar */
+  scrollbar-color: #47d1d1 #0f0f0f;  /* thumb color | track color */
+}
+
+

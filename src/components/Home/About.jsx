@@ -12,7 +12,7 @@ const About = () => {
             </div>
             
             {/* Content Container */}
-            <div className="w-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0 my-10">
+            <div className="max-w-7xl mx-auto px-4 w-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0 my-10">
                 {/* Left Side Image */}
                 <div className="flex-1 flex items-center justify-center mb-8 md:mb-0" data-aos="fade-right" data-aos-delay="300">
                     <div className="relative w-80 h-80 flex  items-center justify-center border-4 border-primary rounded-md overflow-visible bg-base-100">

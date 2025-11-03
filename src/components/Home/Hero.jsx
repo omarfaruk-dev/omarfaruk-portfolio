@@ -6,14 +6,14 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
     return (
-        <section className="mt-16 w-full min-h-[80vh] flex flex-col lg:flex-row  items-center justify-between py-12 md:py-16 lg:py-24 gap-10 md:gap-10">
+        <section className="max-w-7xl mx-auto px-4 mt-16 w-full min-h-[80vh] flex flex-col lg:flex-row  items-center justify-between py-12 md:py-16 lg:py-24 gap-10 md:gap-10">
             {/* Left Side Content */}
             <div className="flex-1 flex flex-col items-start justify-center text-left max-w-xl px-2 md:px-0" data-aos="fade-right" data-aos-delay="200">
                 <h3 className='text-2xl font-semibold text-primary space-grotesk-font' data-aos="fade-up" data-aos-delay="300">Hello! I am </h3>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-secondary space-grotesk-font" data-aos="fade-up" data-aos-delay="400">Omar Faruk</h1>
-                <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-primary space-grotesk-font" data-aos="fade-up" data-aos-delay="500">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-secondary space-grotesk-font" data-aos="fade-up" data-aos-delay="400">Omar Faruk</h2>
+                <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-primary space-grotesk-font" data-aos="fade-up" data-aos-delay="500">
                     <Typewriter
-                        words={['Frontend Developer', 'MERN Stack Developer', 'JavaScript Lover']}
+                        words={['Frontend Developer', 'MERN Stack Developer', 'JavaScript Lover', 'Web Developer']}
                         loop={true}
                         cursor
                         cursorStyle="|"
@@ -21,7 +21,7 @@ const Hero = () => {
                         deleteSpeed={50}
                         delaySpeed={1500}
                     />
-                </h2>
+                </h1>
                 <p className="mb-6 text-lg text-gray-500 dark:text-gray-300" data-aos="fade-up" data-aos-delay="600">
                     I build modern, responsive web applications with a focus on performance and user experience. Let's create something amazing together!
                 </p>

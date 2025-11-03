@@ -1,8 +1,38 @@
 [
   {
+    "title": "Ridex - (Team Project)",
+    "about": "A modern ride-sharing platform offering seamless transportation via bike, car, and CNG with real-time driver matching, secure authentication, and a sleek UI. Ridex ensures fast, safe, and reliable travel experiences for users and admins, featuring dynamic ride scheduling, location tracking, and role-based access control.",
+    "technology": [
+      "NextJs",
+      "Express",
+      "MongoDB",
+      "Socket.io",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Gemini AI",
+      "JWT"
+    ],
+    "thumb_img": "https://i.postimg.cc/BbWN8dzq/Ridex-l.png",
+    "landing_page": "https://your-image-url.com/ridex-landing-page.png",
+    "live": "https://ridex-ride-sharing.vercel.app",
+    "client": "https://github.com/rubel6610/RideX-Frontend",
+    "server": "https://github.com/rubel6610/ridex-backend",
+    "description": "Ridex is a full-stack ride-sharing web application built with NextJs, Express.js, MongoDB and Socket.io. It enables users to book rides instantly, track riders in real-time, and manage ride history with secure authentication and role-based access. The platform also features AI-powered chatbot support and an AI blog generator for enhanced user engagement.",
+    "challenges": "Implementing real-time ride notifications, rider live tracking system, and integrating AI tools for chatbot support and blog generation. Ensuring smooth socket communication and scalable architecture for concurrent ride sessions and AI-driven interactions.",
+    "overcome": "I overcame the real-time notification and tracking challenge by using Socket.IO and geospatial queries to push live ride updates and rider locations. For AI features, I integrated chatbot APIs and built a custom blog generator using prompt engineering and content pipelines. The live chat system between riders and drivers was implemented using WebSocket with efficient message routing and session management.",
+    "PotentialImprovementsAndFuturePlans": "I plan to introduce voice-based ride booking, multilingual support for broader accessibility, and a loyalty rewards system for frequent users. Future updates may include AI-powered ride suggestions based on user behavior and predictive demand mapping for drivers."
+  },
+  {
     "title": "PETIFY",
     "about": "A modern pet adoption and donation platform enabling seamless pet adoption, donation campaigns, secure Stripe payments, and animal welfare with a modern UI, secure authentication, and real-time features for users and admins.",
-    "technology": ["React", "Firebase", "MongoDB", "Express", "Stripe", "Tailwind CSS"],
+    "technology": [
+      "React",
+      "Firebase",
+      "MongoDB",
+      "Express",
+      "Stripe",
+      "Tailwind CSS"
+    ],
     "thumb_img": "https://i.postimg.cc/9MVNRdgF/petify.jpg",
     "landing_page": "https://i.postimg.cc/85qB2pCk/petify-landing-page-original.png",
     "live": "https://petify-us.web.app",
@@ -16,7 +46,13 @@
   {
     "title": "FOODIO",
     "about": "A modern, visually appealing restaurant management web application built with React, Vite, and Tailwind CSS offering seamless experience for discovering, ordering, and managing favorite meals with beautiful UI and robust functionality.",
-    "technology": ["React", "Firebase", "MongoDB", "Express", "Tailwind CSS"],
+    "technology": [
+      "React",
+      "Firebase",
+      "MongoDB",
+      "Express",
+      "Tailwind CSS"
+    ],
     "thumb_img": "https://i.postimg.cc/d0sNPGXG/foodio.jpg",
     "landing_page": "https://i.postimg.cc/fW20tgKs/foodio-landing-page.png",
     "live": "https://foodi0.web.app",
@@ -26,12 +62,18 @@
     "challenges": "Managing food availability and stock tracking to ensure accurate order processing and prevent overselling of items. Implementing a comprehensive order management system that displays order history, status tracking.",
     "overcome": "I overcame the stock management challenge by implementing real-time inventory tracking with MongoDB updates and preventing orders when items are out of stock. For the order management system, I created a comprehensive order page that displays order history and status updates between inventory and order processing.",
     "PotentialImprovementsAndFuturePlans": "Add real-time chat, push notifications, and role based dashboard page for admins and users."
-  
   },
   {
     "title": "ROOMLY",
     "about": "A modern web application for finding and listing roommates and rooms, designed for trust, privacy, and real connections with seamless browsing, searching, and secure authentication features.",
-    "technology": ["React", "Firebase", "MongoDB", "Express", "Tailwind CSS", "DaisyUI"],
+    "technology": [
+      "React",
+      "Firebase",
+      "MongoDB",
+      "Express",
+      "Tailwind CSS",
+      "DaisyUI"
+    ],
     "thumb_img": "https://i.postimg.cc/FFgSc08t/roomly.jpg",
     "landing_page": "https://i.postimg.cc/fW20tgKs/foodio-landing-page.png",
     "live": "https://roomly-app.netlify.app",
@@ -42,8 +84,4 @@
     "overcome": "I overcame the authentication challenge by implementing Firebase Authentication with Google sign-in, proper session management using React Context, and secure user profile creation. For the listing system, I built efficient MongoDB aggregation pipelines for search and filtering, and implemented a like-based contact reveal mechanism that protects user privacy while enabling connections.",
     "PotentialImprovementsAndFuturePlans": "Push notifications and an admin feature allowing admins to promote any user to admin status for enhanced management."
   }
-  
-  
 ]
-
-
