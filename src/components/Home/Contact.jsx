@@ -134,7 +134,7 @@ const Contact = () => {
     {
       icon: <FaXTwitter className="text-xl" />,
       name: "X",
-      url: "https://x.com/omarfarukb7",
+      url: "https://x.com/omarfaruk_dev",
       color: "hover:text-primary"
     },
     {

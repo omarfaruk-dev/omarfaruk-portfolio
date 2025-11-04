@@ -33,7 +33,7 @@ const Hero = () => {
                     <a href="https://linkedin.com/in/dev-omar-faruk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
                         <FaLinkedin />
                     </a>
-                    <a href="https://x.com/omarfarukb7" target="_blank" rel="noopener noreferrer" aria-label="x" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="https://x.com/omarfaruk_dev" target="_blank" rel="noopener noreferrer" aria-label="x" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">
                         <FaXTwitter />
                     </a>
                     <a href="https://codepen.io/omarfaruk-dev" target="_blank" rel="noopener noreferrer" aria-label="CodePen" className="text-2xl text-secondary hover:text-primary hover:shadow-md hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1">

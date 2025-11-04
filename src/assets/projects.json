@@ -1,7 +1,7 @@
 [
   {
     "title": "Ridex - (Team Project)",
-    "about": "A modern ride-sharing platform offering seamless transportation via bike, car, and CNG with real-time driver matching, secure authentication, and a sleek UI. Ridex ensures fast, safe, and reliable travel experiences for users and admins, featuring dynamic ride scheduling, location tracking, and role-based access control.",
+    "about": "A Ride-sharing platform offering seamless transportation via bike, car, and CNG with real-time driver matching, secure authentication. Ridex ensures fast, safe, and reliable travel experiences, location tracking, and real time notification.",
     "technology": [
       "NextJs",
       "Express",
