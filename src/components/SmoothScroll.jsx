@@ -5,17 +5,17 @@ const SmoothScroll = ({ children }) => {
   useEffect(() => {
     // Initialize Lenis
     const lenis = new Lenis({
-      duration: 2.5,
+      duration: 0.8,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       direction: 'vertical',
       gestureDirection: 'vertical',
       smooth: true,
-      mouseMultiplier: 0.5,
+      mouseMultiplier: 1.5,
       smoothTouch: false,
-      touchMultiplier: 1.2,
+      touchMultiplier: 2.5,
       infinite: false,
       smoothWheel: true,
-      wheelMultiplier: 0.5,
+      wheelMultiplier: 1.5,
       normalizeWheel: true,
     });
 
