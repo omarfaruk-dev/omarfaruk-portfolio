@@ -94,8 +94,9 @@ const Projects = () => {
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="modal-box max-w-3xl border border-primary/20"
+            className="modal-box max-w-3xl border border-primary/20 overflow-y-auto max-h-[85vh]"
             onClick={(e) => e.stopPropagation()}
+            data-lenis-prevent
           >
             <div className="flex justify-between items-center mb-4">
               <h3 className="font-bold text-2xl text-primary">
